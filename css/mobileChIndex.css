@@ -1,0 +1,680 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+	height:100%;
+}
+body{
+	height:100%;
+}
+.header{
+    width: 100%;
+    height: 0.55rem;
+    position: relative;
+    /* top: 0;
+    left: 0; */
+    z-index: 999;
+	box-shadow: 0rem 0rem 0.08rem 0rem
+		rgba(0, 0, 0, 0.1);
+}
+.logo{
+    width: 0.44rem;
+	height: 0.26rem;
+	position: absolute;
+	margin: 0.14rem 0.13rem;  
+	background: url(http://icon.shuiyu365.com/logo.png)no-repeat;
+	background-size: 100% 100%;
+}
+.titlelogo{
+    height: 0.26rem;
+    margin-left: 0.62rem;
+	margin-top: 0.2rem;
+	position: absolute;
+}
+.titlelogoCH{
+	font-family: SourceHanSansCN-Medium;
+	font-size: 0.15rem;
+	font-weight: bold;
+    color: #322e2d;
+    line-height: 0;
+}
+.titlelogoEN{
+	font-family: SourceHanSansCN-Normal;
+	font-size: 0.08rem;
+    color: #585858;
+    line-height: 0.3rem;
+}
+.language{
+    width: 0.25rem;
+    height: 0.16rem;
+    background-color: #1c9f9f;
+	font-family: SourceHanSansCN-Regular;
+	font-size: 0.12rem;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    right: 0.54rem;
+    top: 0.18rem;
+}
+.choose{
+    width: 0.15rem;
+    height: 0.15rem;
+    background-color: pink;
+    position: absolute;
+    right: 0.21rem;
+    top: 0.18rem;
+}
+.g-banner {
+	width: 100%;
+	height: 1.8rem;
+}
+.bottomWord{
+	position: absolute;
+	width: 100%;
+	height: 1.5rem;
+	color: #000000;
+	z-index: 99;
+	margin: 0 auto;
+	
+	margin-left:-1.67rem;
+    margin-top: -1.95rem;
+    animation: bannerword 2s forwards;
+}
+@keyframes bannerword{
+	form{
+		margin-left:-1.67rem;
+	}to{
+		margin-left: 0.33rem;
+	}
+}
+.topWord{
+	position: absolute;
+	width: 100%;
+	height: 1.5rem;
+	color: #ffffff;
+	z-index: 99;
+	margin: 0 auto;
+	margin-top: -1.95rem;
+	z-index: 999;
+    margin-left: -1.67rem;
+    animation: bannerword 2s forwards;
+}
+.word{	
+	width: 100%;
+	margin: 0 auto;
+}
+.topwordTitle{
+	width: 1.66rem;
+	height: 0.74rem;
+	font-size: 0.3rem;
+	font-family: SourceHanSansCN-ExtraLight;
+	/* color: #33373c; */
+}
+.border{
+	width: 0.3rem;
+	height: 0.02rem;
+	background-color: #7f7f7f;
+	margin-top: 0.13rem;
+}
+.wordtitlet{
+	font-family: SourceHanSansCN-Light;
+	font-size: 0.09rem;
+	/* color: #33373c; */
+	margin-top: 0.14rem;
+}
+.wordtitleb{
+	font-family: SourceHanSansCN-Regular;
+	font-size: 0.15rem;
+	/* color: #33373c; */
+	margin-top: 0.1rem;
+}
+.bs-slider{
+    overflow: hidden;
+    max-height: 1.8rem;
+    position: relative;
+}
+.bs-slider:hover {
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+.bs-slider .bs-slider-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.bs-slider > .carousel-inner > .item > img,
+.bs-slider > .carousel-inner > .item > a > img {
+    height: 1.8rem;
+    margin: auto;
+    width: 100% !important;
+}
+.fade {
+    opacity: 1;
+}
+.fade .item {
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    left: 0 !important;
+    display: block !important;
+    -webkit-transition: opacity ease-in-out 1s;
+    -moz-transition: opacity ease-in-out 1s;
+    -ms-transition: opacity ease-in-out 1s;
+    -o-transition: opacity ease-in-out 1s;
+    transition: opacity ease-in-out 1s;
+}
+.fade .item:first-child {
+    top: auto;
+    position: relative;
+}
+.fade .item.active {
+    opacity: 1;
+    z-index: 2;
+    -webkit-transition: opacity ease-in-out 1s;
+    -moz-transition: opacity ease-in-out 1s;
+    -ms-transition: opacity ease-in-out 1s;
+    -o-transition: opacity ease-in-out 1s;
+    transition: opacity ease-in-out 1s;
+}
+.indicators-line > .carousel-indicators{
+    top: 90%;
+    position: absolute;
+    z-index: 100;
+    left: 48%;
+    font-size: 0;
+    overflow-x: auto;
+    text-align: right;
+    overflow-y: hidden;
+}
+.carousel-indicators li {
+    float: left;
+}
+.indicators-line > .carousel-indicators li{
+    padding: 0;
+    width: 0.08rem;
+    height: 0.08rem;
+    border: 1px solid rgb(158, 158, 158);
+    text-indent: 0;
+    overflow: hidden;
+    text-align: left;
+    background: rgb(158, 158, 158);
+    -webkit-font-smoothing: antialiased;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-right: 5px;
+    -webkit-transition: all 0.5s cubic-bezier(0.22,0.81,0.01,0.99);
+    transition: all 0.5s cubic-bezier(0.22,0.81,0.01,0.99);
+    z-index: 10;
+    cursor:pointer;
+}
+.indicators-line > .carousel-indicators li:last-child{
+    margin-right: 0;
+}
+.indicators-line > .carousel-indicators .active{
+    background-color: transparent;
+    position: relative;
+    -webkit-transition: box-shadow 0.3s ease;
+    -moz-transition: box-shadow 0.3s ease;
+    -o-transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+.indicators-line > .carousel-indicators .active:before{
+    background-color: #fff;
+    content:"";
+    position: absolute;
+    width:0.08rem;
+    height: 0.08rem;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+.mainBusinessTitle{
+	font-family: SourceHanSansCN-Regular;
+	font-size: 0.18rem;
+    color: #000000;
+	padding-top: 0.53rem;
+	text-align: center;
+}
+.mainBusinessDetail{
+	font-family: SourceHanSansCN-Normal;
+	font-size: 0.09rem;
+    color: #7d7d7d;
+	padding-top: 0.33rem;
+	text-align: center;
+}
+/* 移动端横向滚动 */
+.mainBusinessContent ul{
+    white-space: nowrap;
+    display: -webkit-box;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling:touch;
+}
+/* 去除横向滚动条 */
+::-webkit-scrollbar { width: 0; height: 0; }
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb { border-radius: 999px; border: 5px solid transparent; }
+::-webkit-scrollbar-track { box-shadow: 1px 1px 5px rgba(0,0,0,.2) inset; }
+::-webkit-scrollbar-thumb { min-height: 20px; background-clip: content-box; box-shadow: 0 0 0 5px rgba(0,0,0,.2) inset; }
+::-webkit-scrollbar-corner { background: transparent; }
+.mainBusinessContent ul li{
+    list-style: none;
+}
+.breathe{
+    width: 1.41rem;
+	height: 0.59rem;
+	background-color: #ffffff;
+	box-shadow: 0px 0px 0.05rem 0px rgba(0, 0, 0, 0.03);
+    border-radius: 0.05rem;
+    margin-top: 0.08rem;
+	margin-left: 0.14rem;
+	font-family: SourceHanSansCN-Regular;
+	font-size: 0.15rem;
+	color: #212121;
+}
+.breatingImg{
+	width: 0.31rem;
+	height: 0.31rem;
+	margin: 0.14rem 0.19rem;
+	border-radius: 50%;
+}
+.breatheImg{
+	background: url(http://icon.shuiyu365.com/field1.1.png)no-repeat;
+	background-size: 100% 100%;
+}
+.hearingImg{
+	background: url(http://icon.shuiyu365.com/field2.1.png)no-repeat;
+	background-size: 100% 100%;
+}
+.bloodImg{
+	background:url(http://icon.shuiyu365.com/field3.1.png)no-repeat;
+	background-size: 100% 100%;
+}
+.chainImg{
+	background:url(http://icon.shuiyu365.com/field4.1.png)no-repeat;
+	background-size: 100% 100%;
+}
+.fetalImg{
+	background:url(http://icon.shuiyu365.com/field5.1.png)no-repeat;
+	background-size: 100% 100%;
+}
+.breatingWord{
+	font-family: SourceHanSansCN-Regular;
+	font-size: 0.15rem;
+	color: #212121;
+	margin-top: -0.4rem;
+	padding-left: 0.59rem;
+}
+.kong{
+    width: 100%;
+	height: 0.05rem;
+    background-color: #f7f7f7;
+    margin-top: 0.34rem;
+}
+.mainteam{
+    text-align: center;
+    opacity: 0;
+}
+.aboutus{
+    width: 100%;
+	height: 4.3rem;
+    margin-top: 0.5rem;
+    opacity: 0;
+	
+}
+.Separate{
+    width: 100%;
+    height: 0.05rem;
+    background-color: #f7f7f7;
+}
+@keyframes about{
+	form{
+		margin-left:-7.2rem;
+	}to{
+		margin-left: 0rem;
+	}
+}
+.content{
+	height: 4.3rem;
+    background: url(http://icon.shuiyu365.com/aboutus_bg.png)no-repeat;
+    background-size: 100% 100%;
+}
+.aboutanimation{
+    margin-left: -7.2rem;
+}
+.aboutusTitle{
+	font-family: SourceHanSansCN-Regular;
+	font-size: 0.18rem;
+    color: #ffffff;
+	padding-top: 0.33rem;
+    text-align: center;
+}
+.aboutusDetail{
+	font-family: SourceHanSansCN-Normal;
+	font-size: 0.09rem;
+    color: #ffffff;
+	padding-top: 0.13rem;
+    text-align: center;
+}
+@keyframes aboutus{
+	form{
+		margin-left:-7.2rem;
+	}to{
+		margin: 0.23rem ;
+	}
+}
+.aboutusContent{
+    width: 3.31rem;
+    height: 2.5rem;
+    margin: 0.23rem auto;
+}
+.aboutusContent p{
+	font-family: SourceHanSansCN-Normal;
+	font-size: 0.09rem;
+	line-height: 0.18rem;
+    color: #ffffff;
+}
+.aboutusbutton{
+    width: 0.81rem;
+    height: 0.24rem;
+    margin: 0 auto;
+    border: solid 0.01rem #ffffff;
+	font-family: SourceHanSansCN-Light;
+	font-size: 0.12rem;
+    color: #ffffff;
+    text-align: center;
+	line-height: 0.23rem;
+}
+.Cooperation{
+	text-align: center;
+    margin-top: 0.2rem;
+    opacity: 0;
+}
+.CooperationTitle{
+	font-family: SourceHanSansCN-Regular;
+	font-size: 0.18rem;
+    color: #000000;
+	padding-top: 0.53rem;
+	text-align: center;
+}
+.CooperationDetail{
+	font-family: SourceHanSansCN-Normal;
+	font-size: 0.09rem;
+    color: #7d7d7d;
+	padding-top: 0.33rem;
+	text-align: center;
+}
+.brand{
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 0.43rem;
+}
+.numberOne{
+    margin-left: 0.06rem;
+	width: 98%;
+    height: 0.45rem;
+}
+.numberTwo{
+    margin-top: 0.05rem;
+}
+.firstRow{
+	width: 0.87rem;
+	height: 0.45rem;
+	box-sizing: border-box;
+	border: solid 0.01rem #d8d8d8;
+	float: left;
+	background-position: center;
+	margin: 0 auto;
+}
+.huirui{
+	background: url(http://icon.shuiyu365.com/img/index/chbrand1.png)no-repeat center -0.01rem ;
+	background-size: 100% 100%;
+}
+.jinge{
+	margin-left: 0.05rem;
+	background: url(http://icon.shuiyu365.com/img/index/chbrand2.png) no-repeat center -0.01rem;
+	background-size: 100% 100%;
+}
+.xiaili{
+	margin-left: 0.05rem;
+	background: url(http://icon.shuiyu365.com/img/index/chbrand3.png) no-repeat center -0.01rem;
+	background-size: 100% 100%;
+}
+.enganding{
+	margin-left: 0.05rem;
+    background: url(http://icon.shuiyu365.com/img/index/chbrand4.png) no-repeat center -0.01rem;
+    background-size: 100% 100%;
+}
+.haizheng{
+	background: url(http://icon.shuiyu365.com/img/index/chbrand5.png) no-repeat center -0.01rem;
+	background-size: 100% 100%;
+}
+.xiuzheng{
+	margin-left: 0.05rem;
+    background: url(http://icon.shuiyu365.com/img/index/chbrand6.png) no-repeat center -0.01rem;
+    background-size: 100% 100%;
+}
+.qingchunbao{
+	margin-left: 0.05rem;
+    background: url(http://icon.shuiyu365.com/img/index/chbrand7.png) no-repeat center -0.05rem;
+    background-size: 100% 100%;
+}
+.jiuzhitang{
+	margin-left: 0.05rem;
+    background: url(http://icon.shuiyu365.com/img/index/chbrand8.png) no-repeat center -0.01rem;
+    background-size: 100% 100%;
+}
+.shuheng{
+    background: url(http://icon.shuiyu365.com/img/index/chbrand9.png) no-repeat center -0.05rem;
+    background-size: 100% 100%;
+}
+.yuyue{
+	margin-left: 0.05rem;
+    background: url(http://icon.shuiyu365.com/img/index/chbrand10.png) no-repeat center -0.05rem;
+    background-size: 100% 100%;
+}
+.bidi{
+	margin-left: 0.05rem;
+    background: url(http://icon.shuiyu365.com/img/index/chbrand11.png) no-repeat center -0.05rem;
+    background-size: 100% 100%;
+}
+.duleisi{
+	margin-left: 0.05rem;
+    background: url(http://icon.shuiyu365.com/img/index/chbrand12.png) no-repeat center -0.05rem;
+    background-size: 100% 100%;
+}
+.zhongde{
+    background: url(http://icon.shuiyu365.com/img/index/chbrand15.png) no-repeat center -0.01rem;
+    background-size: 100% 100%;
+}
+.ximenzi{
+	margin-left: 0.05rem;
+    background: url(http://icon.shuiyu365.com/img/index/chbrand16.png) no-repeat center -0.05rem;
+    background-size: 100% 100%;
+}
+.jieshibang{
+    margin-left: 0.05rem;
+    background: url(http://icon.shuiyu365.com/img/index/chbrand13.png) no-repeat center -0.05rem;
+    background-size: 100% 100%;
+}
+.yuansheng{
+	margin-left: 0.05rem;
+    background: url(http://icon.shuiyu365.com/img/index/chbrand14.png) no-repeat center -0.01rem;
+    background-size: 100% 100%;
+}
+.fengli{
+    background: url(http://icon.shuiyu365.com/img/index/chbrand17.png) no-repeat center -0.05rem;
+    background-size: 100% 100%;
+}
+.ruishengda{
+    margin-left: 0.05rem;
+    background: url(http://icon.shuiyu365.com/img/index/chbrand18.1.png) no-repeat center -0.05rem;
+    background-size: 100% 100%;
+}
+.didake{
+	margin-left: 0.05rem;
+    background: url(http://icon.shuiyu365.com/img/index/chbrand18.png) no-repeat center -0.01rem;
+    background-size: 100% 100%;
+}
+.aodiya{
+	margin-left: 0.05rem;
+    background: url(http://icon.shuiyu365.com/img/index/chbrand19.png) no-repeat center -0.01rem;
+    background-size: 100% 100%;
+}
+.oushida{
+    background: url(http://icon.shuiyu365.com/img/index/chbrand20.png) no-repeat center -0.04rem;
+    background-size: 100% 100%;
+}
+.weiting{
+	margin-left: 0.05rem;
+    background: url(http://icon.shuiyu365.com/img/index/chbrand21.png) no-repeat center -0.05rem;
+    background-size: 100% 100%;
+}
+.kuaishuer{
+	margin-left: 0.05rem;
+    background: url(http://icon.shuiyu365.com/img/index/chbrand22.png) no-repeat center -0.05rem;
+    background-size: 100% 100%;
+}
+.bukele{
+	margin-left: 0.05rem;
+    background: url(http://icon.shuiyu365.com/img/index/chbrand23.png) no-repeat center -0.05rem;
+    background-size: 100% 100%;
+}
+.aiyun{
+    background: url(http://icon.shuiyu365.com/img/index/chbrand24.png) no-repeat center -0.01rem;
+    background-size: 100% 100%;
+}
+.shiyuebaobei{
+	margin-left: 0.05rem;
+    background: url(http://icon.shuiyu365.com/img/index/chbrand25.png) no-repeat center -0.05rem;
+    background-size: 100% 100%;
+}
+.ruisimai{
+	margin-left: 0.05rem;
+    background: url(http://icon.shuiyu365.com/img/index/chbrand26.png) no-repeat center -0.01rem;
+    background-size: 100% 100%;
+}
+.kaiditai{
+	margin-left: 0.05rem;
+    background: url(http://icon.shuiyu365.com/img/index/chbrand27.png) no-repeat center -0.05rem;
+    background-size: 100% 100%;
+}
+.contactus{
+    opacity: 0;
+}
+.contactusTitle{
+	font-family: SourceHanSansCN-Regular;
+	font-size: 0.18rem;
+    color: #000000;
+	padding-top: 0.53rem;
+	text-align: center;
+}
+.contactusDetail{
+	font-family: SourceHanSansCN-Normal;
+	font-size: 0.09rem;
+    color: #7d7d7d;
+	padding-top: 0.33rem;
+	text-align: center;
+}
+.contactusContent{
+    width: 3.33rem;
+    margin: 0.38rem auto;
+}
+.user{
+    width: 100%;
+	height: 0.42rem;
+	background-color: #f6f6f6;
+	border-radius: 0.05rem;
+    border: solid 1px #cdcdcd;
+    margin-top: 0.15rem;
+	font-family: SourceHanSansCN-Regular;
+	font-size: 0.12rem;
+    color: #969696;
+    line-height: 0.4rem;
+}
+.username{
+	font-family: SourceHanSansCN-Regular;
+	font-size: 0.12rem;
+    color: #969696;
+	line-height: 0.4rem;
+	margin-left: 0.19rem;
+}
+.name{
+	width: 2rem;
+	height: 0.42rem;
+	font-size: 0.12rem;
+	background-color: #f6f6f6;
+}
+.verifi{
+	width: 0.95rem;
+	height: 0.42rem;
+	font-size: 0.12rem;
+	background-color: #f6f6f6;
+}
+.chan{
+	width: 1.69rem;
+	height: 0.3rem;
+	background-color: red;
+	margin-left: 1.59rem;
+	margin-top: -0.36rem;
+}
+.footer{
+    width: 100%;
+    height: 2.3rem;
+    background-color: #35373f;
+    text-align: center;
+    position: relative;
+}
+.twocode{
+    width: 1.07rem;
+	height: 1.07rem;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 0.05rem;
+	margin-left: 1.34rem;
+	margin-top: 0.23rem;
+	position: absolute;
+}
+.twocode img{
+	width: 0.96rem;
+	height: 0.96rem;
+	position: absolute;
+	margin-left: -0.48rem;
+	margin-top: 0.06rem;
+}
+.companyName{
+	font-family: SourceHanSansCN-Regular;
+	font-size: 0.12rem;
+    color: #ffffff;
+    padding-top: 0.1rem;
+}
+.companyContent{
+    width: 3rem;
+	font-family: SourceHanSansCN-Normal;
+	font-size: 0.09rem;
+	line-height: 0.15rem;
+	color: #909090;
+	position: absolute;
+	margin-top: 1.3rem;
+	left: 10%;
+}
+.footbottom{
+    width: 100%;
+	height: 0.23rem;
+	background-color: #000000;
+    opacity: 0.8;
+	font-family: SourceHanSansCN-Regular;
+	font-size: 0.07rem;
+	line-height: 0.25rem;
+	color: #909090;
+	text-align: center;
+}

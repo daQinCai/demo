@@ -1,0 +1,64 @@
+/*轮播CSS*/
+.g-banner {
+    margin-top: 1.13rem;
+    height: 5.30rem;
+	/* position: relative; */
+	
+}
+.m-slider{
+	height: 5.30rem;
+	position: relative;
+	overflow: hidden;
+}
+.banner-btn{
+	position: absolute;
+	top:50%;
+	width: 100%;
+}
+.banner-btn div{
+	width: 0.5rem;
+	height: 0.5rem;
+	text-align: center;
+	font-size: 0.4rem;
+	color: #03A9F4;
+	top:50%;
+	line-height: 0.5rem;
+	transform: translateY(-50%);
+}
+.rightBtn{
+	margin-left: 95%;
+	margin-top: -4%
+}
+.banner-btn div:hover{
+	cursor: pointer;
+}
+.banner-btn div::selection{
+	background-color: transparent;
+	color: #03A9F4;
+}
+.m-slider .slider_img{
+	/* top:50%; */
+	position: absolute;
+	/* left: 50%; */
+	opacity: 0;
+	transition: opacity .5s ease;
+}
+.m-cursor{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0.14rem;
+	width: 0.9rem;
+	height: 0.2rem;
+}
+.m-cursor li{	
+	width: 0.1rem;
+	height: 0.1rem;
+	border-radius: 0.1rem;
+	margin: 0 0.05rem;
+	background-color: #dedfdf;
+	float: left;
+}
+.m-cursor .z-active02 {
+	background-color: #5ed0ba;
+}

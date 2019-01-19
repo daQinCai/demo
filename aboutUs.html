@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.location.href = /Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent) ? "#" :  "#";
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="shortcut icon" href="http://icon.shuiyu365.com/bitbug_favicon.ico" />
+    <title>谁与医疗科技（杭州）有限公司-关于我们</title>
+    <link rel="stylesheet" href="css/aboutUs.css" type="text/css" >
+    <link rel="stylesheet" href="css/footer.css" >
+    <link rel="stylesheet" href="css/Cooldog.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <script>
+        //产生验证码 
+        window.onload = function() {
+            createCode()
+        }
+        var code; //在全局定义验证码 
+        function createCode() {
+            code = "";
+            var codeLength = 4; //验证码的长度 
+            var checkCode = document.getElementById("code");
+            var random = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+              'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); //随机数 
+            for(var i = 0; i < codeLength; i++) { //循环操作 
+                var index = Math.floor(Math.random() * 36); //取得随机数的索引（0~35） 
+                code += random[index]; //根据索引取得随机数加到code上 
+            }
+            checkCode.value = code; //把code值赋给验证码 
+        }
+        //校验验证码 
+        function validate() {
+            var inputCode = document.getElementById("ctl00_txtcode").value.toUpperCase(); //获取输入框内验证码并转化为大写  
+            if(inputCode.length <= 0) { //若输入的验证码长度为0 
+                alert("请输入验证码！"); //则弹出请输入验证码 
+            } 
+            else if(inputCode != code) { //若输入的验证码与产生的验证码不一致时 
+                alert("验证码输入错误!"); //则弹出验证码输入错误 
+                createCode(); //刷新验证码 
+                document.getElementById("ctl00_txtcode").value = "";//清空文本框 
+            } else { 
+                console.log("输入成功");
+            }
+        }
+        // 验证邮箱
+        function verification(){
+            var temp = document.getElementById("email");                 //对电子邮件的验证   
+            var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;                
+            if (!myreg.test(temp.value)) {                    
+                // $("#intererrmsg").show();                    
+                // $("#intermsg").html("请输入正确的用户名！");      
+                alert("请输入正确的用户名")              
+                    return false;                
+            }
+        }
+   </script>
+</head>
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript"> 
+        $('.tabTitleImg').hover(function () {
+        $('.tabTitleImg').toggleClass('active');
+    }); 
+    </script>
+<body>
+    <!-- 导航栏 -->
+    <div class="top" id="topnav">
+        <div class="topContent">
+            <div class="topcontentleft">
+                <a href="index.html"><div class="logo"></div></a> 
+                <p class="logoWord" id="logoword">让生命更健康</p>
+                <p class="logoEnword" id="logoEnword">Make life healthier</p>
+            </div>
+            <div class="topcontentright">
+                <div id="change"><a href="CHaboutUs.html"><img src="http://icon.shuiyu365.com/switch.png" alt=""></a></div>
+                <div class="nav" id="nav">
+                    <div class="home"><a href="index.html" class="homea" id="home">HOME</a></div>
+                    <div class="Separate">|</div>
+                    <div class="aboutUs"><a href="aboutUs.html" class="abouta" id="abouts">ABOUT US</a></div>
+                    <div class="Separate">|</div>
+                    <div class="productDescription"><a href="product.html" class="producta" id="product">PRODUCT</a></div>                    
+                    <div class="Separate">|</div>
+                    <div class="careerDevelopment"><a href="recruitment.html" class="recursiona" id="recursiona">JOIN US</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 顶部banner -->
+    <div class="carouselMap"></div>
+    <!-- 选项卡 -->
+    <div class="tab" id="tab">
+        <!-- 选项卡标题 -->
+        <div class="tabTitle" id="tabTitle">
+            <!-- 公司简介 -->
+            <div class="companyProfile" id="companyProfile">
+                <div class="tabTitleImagefocus" id="tabTitleImagefocus"></div>
+                <div class="tabTitleImage" id="tabTitleImage"></div>
+                <div class="tabTitleWord">Our Company</div>
+            </div>
+            <!-- 愿景与使命 -->
+            <div class="mission" id="mission">
+                <div class="missionImgfocus" id="missionImgfocus"></div>
+                <div class="missionImage" id="missionImage"></div>
+                <div class="tabTitleWord">Vision</div>
+            </div>
+            <!-- 核心价值观 -->
+            <div class="Value" id="Value">
+                <div class="ValueImgfocus" id="ValueImgfocus"></div>
+                <div class="ValueImg" id="ValueImg"></div>
+                <div class="tabTitleWord">Core Value</div>
+            </div>
+            <!-- 生态圈文化 -->
+            <div class="culture" id="culture">
+                <div class="cultureImgfocus" id="cultureImgfocus"></div>
+                <div class="cultureImg" id="cultureImg"></div>
+                <div class="tabTitleWord">Ecological Culture</div>
+            </div>
+            <!-- 企业环境 -->
+            <div class="surroundings" id="surroundings">
+                <div class="surroundingsImgfocus" id="surroundingsImgfocus"></div>
+                <div class="surroundingsImg" id="surroundingsImg"></div>
+                <div class="tabTitleWord">Office Environment</div>
+            </div>
+        </div>
+        <!-- 公司简介选项卡内容 -->
+        <div class="companyProfileContent" id="companyProfileContent">
+            <div class="companyProfileContentWord">
+                Established in 2003, Shui Yu Medical Technology Co.,Ltd is always focusing on health. With the mission "making life healthier" in mind, we have put the concept of health to thousands of families.We are striving to build an all-around ecology culture with our medicines and household medical devices.
+                <br>
+                <br>
+                With its headquater located in Hangzhou, Shui Yu is collaborating with multiple brands in the medical field to promote the overall sales both online and offline.The brands we are working with include Resmed,Curative, Zhongde etc. Besides, we have our own brands like "Shi Jing" and "Usound".The first and the second word from "Shi Jing" derive from the name of two famous ancient medical experts "Li ShiZhen”and "Zhang ZhongJing" respectively.The Shi Jing Pharmacy is a successful example of combination with the Internet. It not only greatly facilitates the patients and medical staff, but also saves a lot of social resources.   
+                <br>
+                <br>
+                In January 2018, we established the Hangzhou sleep apnea and disorder study institute in the Yangtze River Delta to raise the awareness of both the public and medical staff toward this disease. We have always been studying the way to prevent OSAHS from happening and trying our very best to improve the patients' health. 
+                <br>
+                <br>
+                Shui Yu grasps the scientific and technological trend with the internet, drastically changes the traditional medical field and provides a convenient way for patients to communicate. Combined with AI technology, the "yuntaixin" mobile app has benefitted thousands of pregant women. Its media team "Shi Se Shuo" publicizes with pictures, videos and live presentation to promote health and extend the value of the company in the medical media, which currently ranks third in the field.
+                <br>
+                <br>
+                Shui Yu will further devote itself to the medical field and bring the scientific and advanced health concept to the public. Its value " Progress, Centripetalism, Goodness" will be fully implemented to make life healthier. 
+            </div>
+        </div>
+        <!-- 愿景与使命选项卡内容 -->
+        <div class="missionContent" id="missionContent">
+            <div class="missionContentCenter">
+                <div class="missionContentCenterWord">
+                    <p class="Recent">Imminent Vision</p>
+                    <p class="RecentContent">Be a recognized distributor and online service dealer in the medicine and household medical device market.</p>
+                    <p class="Mediumterm">Mid-term Vision (before 2025)  </p>
+                    <p class="RecentContent">Become an enterprise with well-known brands and platforms in the health market. </p>
+                    <p class="Longterm">Mid and long-term Vision  (before 2030) </p>
+                    <p class="RecentContent">To be the leading force in the health market. </p>
+                </div>
+                <div class="missionContentCenterImg">
+                    <div class="missionContentCenterWordLeft"></div>
+                    <div class="missionContentCenterWordRight"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 核心价值观选项卡内容 -->
+        <div class="ValueContent" id="ValueContent">
+            <div class="To">
+                <!-- 向上 -->
+                <div class="toUp">
+                    <div class="toUpImg"></div>
+                    <p class="toUpTitle">Progress </p>
+                    <p class="toUpEntop">Devoted to work</p>
+                    <p class="toUpbottom">as a team</p>
+                </div>
+                <!-- 向心 -->
+                <div class="toHeart">
+                    <div class="toHearthImg"></div>
+                    <p class="toUpTitle">Centripetalism</p>
+                    <p class="toUpEntop">Embrace the change</p>
+                    <p class="toUpbottom">with self creation</p>
+                </div>
+                <!-- 向善 -->
+                <div class="toKindness">
+                    <div class="tokindImg"></div>
+                    <p class="toUpTitle">Goodness</p>
+                    <p class="toUpEntop"> Be good to others </p>
+                    <p class="toUpbottom">and stay healthy</p>
+                </div>
+            </div>
+        </div>
+        <!-- 生态圈文化选项卡内容 -->
+        <div class="cultureContent" id="cultureContent">
+            <div class="cultureTwo">
+                <div class="cultureContentWord">
+                    <p class="cultureContentTitle">Connection makes everything alive</p>
+                    <p class="cultureContentDetail">We believe the company is an ecological circle with each department belongs to a different circle according to its functions.</p>
+                    <p class="cultureContentDetail">The five circles, namely the soil circle, the biological circle, the water circle, the air circle and the rock circle, represent dedication, progress,</p>
+                    <p class="cultureContentDetail">inclusiveness, creativity and fortitude accordingly.</p>
+                </div>
+                <div class="cultureContentImg">
+                    <!-- 土壤圈 -->
+                    <div class="soilCircle">
+                        <div class="soilCircleImg"></div>
+                        <p class="soilCircleTitle">The soil circle</p>
+                        <p class="soilCircleDetail">The soil circle nourishes</p>
+                        <p class="soilCircleDetail">the earth with its rich </p>
+                        <p class="soilCircleDetail">nutrients. So it serves for</p>
+                        <p class="soilCircleDetail">the members in the circle</p>
+                        <p class="soilCircleDetail">and supports the daily</p>
+                        <p class="soilCircleDetail">routines of the company.</p>
+                    </div>
+                    <!-- 生物圈 -->
+                    <div class="Biosphere">
+                        <div class="biosphereImg"></div>
+                        <p class="BiosphereTitle"> The biology circle</p>
+                        <p class="soilCircleDetail">Everyone needs to be alert  </p>
+                        <p class="soilCircleDetail">for all the possible dangers</p>
+                        <p class="soilCircleDetail"> to come. Be ready with full  </p>
+                        <p class="soilCircleDetail"> vigor for the visible and   </p>   
+                        <p class="soilCircleDetail">invisible competitions.</p>  
+                    </div>
+                    <!-- 水圈 -->
+                    <div class="Hydrosphere">
+                        <div class="waterImg"></div>
+                        <p class="waterTitle">The water circle</p>
+                        <p class="soilCircleDetail">The water circle appeases </p>
+                        <p class="soilCircleDetail"> the heart of our clients with its</p>
+                        <p class="soilCircleDetail"> soft stream. It provides the best</p>
+                        <p class="soilCircleDetail">quality products and service</p>
+                        <p class="soilCircleDetail"> with endless enthusiasm and patience.</p>
+                    </div>
+                    <!-- 空气圈 -->
+                    <div class="airRing">
+                        <div class="airImg"></div>
+                        <p class="airTitle">The air circle</p>
+                        <p class="soilCircleDetail">The air circle is infused</p>
+                        <p class="soilCircleDetail">with ethereal atmosphere,</p>
+                        <p class="soilCircleDetail"> which functions as the</p>
+                        <p class="soilCircleDetail">origin of creativity.</p>
+                        <p class="soilCircleDetail">Circle members are working</p>
+                        <p class="soilCircleDetail">creatively under this </p>
+                        <p class="soilCircleDetail">atmosphere with incessant</p>
+                        <p class="soilCircleDetail">ideas and inspirations.</p>
+                    </div>
+                    <!-- 岩石圈 -->
+                    <div class="rockRing">
+                            <div class="rockImg"></div>
+                            <p class="rockTitle">The rock circle</p>
+                            <p class="soilCircleDetail">The rock circle is the </p>
+                            <p class="soilCircleDetail">backbone of the team. Its </p>
+                            <p class="soilCircleDetail">rich experience and fortitude </p>
+                            <p class="soilCircleDetail">functions as an impenetrable  </p>
+                            <p class="soilCircleDetail">shell for various problems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 企业环境选项卡内容 -->
+        <div class="surroundingsContent" id="surroundingsContent">
+            <div class="surroundingsContentCarousel">
+                <div class="Cooldog_container">
+                    <!-- 图片 -->
+                    <div class="Cooldog_content">
+                        <ul>
+                            <li class="p1">
+                                <a href="#">
+                                    <img src="http://icon.shuiyu365.com/img/aboutUS/1%281%29.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="p2">
+                                <a href="#">
+                                    <img src="http://icon.shuiyu365.com/img/aboutUS/2.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="p3">
+                                <a href="#">
+                                    <img src="http://icon.shuiyu365.com/img/aboutUS/3%282%29.jpg" alt="">
+                                </a>
+                             </li>
+                            <li class="p4">
+                                <a href="#">
+                                    <img src="http://icon.shuiyu365.com/img/aboutUS/4%283%29.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="p5">
+                                <a href="#">
+                                    <img src="http://icon.shuiyu365.com/img/aboutUS/5.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="p5">
+                                <a href="#">
+                                    <img src="http://icon.shuiyu365.com/img/aboutUS/6.jpg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 左右按钮 -->
+                    <a href="javascript:;" class="btn_left">
+                        <i class="iconfont icon-zuoyoujiantou"></i>
+                    </a>
+                    <a href="javascript:;" class="btn_right">
+                        <i class="iconfont icon-zuoyoujiantou-copy-copy"></i>
+                    </a>
+                    <!-- 下面小点 -->
+                    <div class="buttons clearfix">
+                        <a href="javascript:;" class="color"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                    </div>
+                </div>      
+            </div>
+        </div>
+    </div>
+    <!-- 底部留言板 -->
+    <div class="foot">
+        <div class="footContent">
+            <div class="footLeft">
+                <p class="companyName">Shui Yu Medical Technology Co., Ltd </p>
+                <p class="URL">Website：www.shuiyu365.com    </p>
+                <p class="phone">Phone：0571-86879711</p>
+                <p class="email">E-mail：HRhr@shuiyu365.com</p>
+                <p class="address">Address: Room 1101, Building 9, No.20 KeJiYuan Road, Hangzhou</p>
+                <div class="twoCode"></div>
+                <p class="attention">Scan For More Info</p>
+            </div>
+            <div class="footRight">
+                <div class="messageTitle">-Leave us a message-</div>
+                <div class="Name">Your name 
+                <br> 
+                <input type="text" class="NameInput" id="name" value=""> </div>
+                <div class="messageContent">Content 
+                <br>
+                <textarea  type="text" class="messageContentInput" id="message"></textarea></div>
+                <div class="Email">Your E-mail 
+                <br>
+                <input type="text" class="EmailInput" id="email" onblur="verification()"> </div>
+                <div class="verification">Verification code
+                <br>
+                <!--时间：2017-01-11 描述：输入框ct100_textcode -->
+                <input type="text" id="ctl00_txtcode" onblur="validate()"/>
+                <!--时间：2017-01-11 描述：把验证码定义为按钮，点击刷新-->
+                <input type="button" id="code" />
+                <!--时间：2017-01-11 描述：验证按钮 -->
+                <span onclick="createCode()" class="change">Change for another</span>
+                </div>
+                <div class="tijiao" id="submit">Submit</div>
+                <div class="tijiao" id="cancel">Cancel</div>
+            <!-- <input type="submit" value="" class="tijiao"> -->
+            <!-- <input type="text"> -->
+            </div>
+        </div>
+        <div class="Remarks">
+            <p class="RemarksContent">版权所有：谁与医疗科技（杭州）有限公司  京ICP备：2018-0034号  技术支持：谁与开发部</p>
+        </div> 
+    </div>
+</body>
+<script src="js/serRem.js"></script>
+<script src="js/adoutUs.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/Cooldog.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script>
+    $("#cancel").click(function(){
+        $("#name").val("");
+        $("#message").val("");
+        $("#email").val("");
+        $("#ctl00_txtcode").val("");
+    })
+    $('#submit').click(function(){
+        var name = $("#name").val();
+        var message = $("#message").val();
+        var email = $("#email").val();
+    console.log("你在进行留言操作");
+    $.ajax({
+        url:"http://www.shuiyu365.com/shuiyu/message/insMessage",
+        data: {
+            visitorName:name,
+            visitorMailbox:message,
+            message:email,
+        },
+        success:function(res){
+            alert("留言成功")
+            $("#name").val("");
+            $("#message").val("");
+            $("#email").val("");
+            $("#ctl00_txtcode").val("");
+        },
+        error:function(res){
+            console.log("留言失败");
+        } 
+    });
+})
+</script>
+</html>

@@ -1,0 +1,886 @@
+*{
+    margin: 0rem;
+    padding: 0rem;
+	font-family: Sample;
+}
+html{
+	font-size: 100px;
+}
+a{
+	text-decoration: none;
+}
+.top{
+	width: 100%;
+	margin: 0 auto;
+	position: fixed;
+	z-index: 999;
+	left: 0;	
+	right: 0;
+	top: 0;
+	background-color: white;
+}
+.topcontentleft{
+	height: 0.87rem;
+	width: 2rem;
+	float: left;
+	margin-top: 0.1rem;
+}
+.topContent{
+	width: 12rem;
+	height:0.9rem;
+	margin: 0 auto;
+}
+.logo{
+	width: 0.92rem;
+	height: 0.54rem;
+	margin-left: 0.33rem;
+	background: url(http://icon.shuiyu365.com/logo.png)no-repeat;
+	background-size: 100% 100%;
+}
+.logoWord{
+	margin-left: 0.30rem;
+	height: 0.16rem;
+	font-size: 0.16rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0.004rem;
+	color: #9f7f59;
+}
+.logoEnword{
+	height: 0.06rem;
+	font-size: 0.08rem;
+	font-weight: normal;
+	font-stretch: normal;
+	color: #9f7f59;
+	margin-left: 0.30rem;
+	margin-top: 0.05rem;
+}
+.topcontentright{
+	width: 10rem;
+	height: 1rem;
+	float: right;
+	margin-top: 0.1rem;
+	position: relative;
+}
+#change{
+	width: 1.1rem;
+	height: 0.22rem;
+	color: #4e4e4e;
+	margin-top:0.2rem;
+	font-size: 0.14rem;
+	cursor: pointer;
+	position: absolute;
+	right: 0.2rem;
+}
+.nav {
+	float: right;
+	font-size: 0.14rem;
+	color: #7d7d7d;
+	margin-top:0.4rem;
+	position: absolute;
+	right: 0;
+}
+.nav div{
+	float: left;
+	cursor: pointer;
+	margin-top: 0.2rem;
+}
+.home{
+	width: 0.75rem;
+	height: 0.3rem;
+	position: relative;
+	color: #333333;
+	text-align: center;
+}
+.homea{
+	width: 0.4rem;
+	height: 0.3rem;		
+	position: relative;
+	color: #333333;
+	text-align: center;
+	padding-bottom: 0.22rem;
+}
+.homea:after {
+	content: "";
+	width: 0;
+	height: 0.02rem;
+	background: #1c9f9f;
+	position: absolute;
+	bottom: 0%;
+	left: 50%;
+	transition: all .8s;
+}
+.homea:hover:after {
+	left: 0%;
+	width: 100%;
+}
+.aboutUs,.productDescription,.careerDevelopment{
+	width: 1rem;
+	height: 0.3rem;
+	position: relative;
+	color: #333333;
+	text-align: center;
+}
+.abouta{
+	height: 0.3rem;
+	position: relative;
+	color: #333333;
+	text-align: center;
+	padding-bottom: 0.22rem;
+}
+.abouta:after {
+	content: "";
+	width: 0;
+	height: 0.02rem;
+	background: #1c9f9f;
+	position: absolute;
+	bottom: 0%;
+	left: 50%;
+	transition: all .8s;
+}
+.abouta:hover:after {
+	left: 0%;
+	width: 100%;
+}
+.producta{
+	height: 0.3rem;
+	position: relative;
+	color: #333333;
+	text-align: center;
+	padding-bottom: 0.19rem;
+	border-bottom: 0.02rem solid #1c9f9f;
+}
+.recursiona{
+	height: 0.3rem;
+	position: relative;
+	color: #333333;
+	text-align: center;
+	padding-bottom: 0.22rem;
+}
+.recursiona:after {
+	content: "";
+	width: 0;
+	height: 0.02rem;
+	background: #1c9f9f;
+	position: absolute;
+	bottom: 0%;
+	left: 50%;
+	transition: all .8s;
+}
+.recursiona:hover:after {
+	left: 0%;
+	width: 100%;
+}
+.nav div a{
+	color: #7d7d7d;
+}
+.product{
+	width: 100%;
+	margin-top: 1.11rem;
+	background-color: #f4f4f4;
+}
+.productTagbar{
+	width: 12rem;
+	height: 1.5rem;
+	margin: 0 auto;
+	position: relative;	
+}
+.sleepHealth{
+	width: 1.7rem;
+	height: 0.74rem;
+	position: absolute;
+	float: left;
+	margin: 0.42rem auto;
+}
+.bottom{
+	height: 1rem;
+	width: 100%;
+}
+.hearingHealth{
+	width: 1.7rem;
+	height: 0.74rem;
+	position: absolute;
+	margin-top: 0.42rem;
+	margin-left: 2.6rem;
+	float: left;
+}
+.bloodSugarHealth{
+	width: 1.7rem;
+	height: 0.74rem;
+	position: absolute; 
+	margin-top: 0.42rem;
+	margin-left:5.2rem;
+	float: left;
+}
+.fetalHeart{
+	width: 1.7rem;
+	height: 0.74rem;
+	position: absolute;
+	margin-top: 0.42rem;
+	margin-left:10.3rem;
+	float: left;
+}
+.onlinePharmacy{
+	width: 1.7rem;
+	height: 0.74rem;
+	position: absolute;
+	margin-top: 0.42rem;
+	margin-left:7.8rem;
+	float: left;
+}
+
+.sleepHealthWord{
+	font-size: 0.14rem;
+	color: #000000;
+	text-align: center;
+	line-height: 0.4rem;
+}
+.focus{
+	width: 0.55rem;
+	height: 0.12rem;
+	background:url(http://icon.shuiyu365.com/productfocus.png) no-repeat;
+	background-size: 100% 100%;
+	margin-left: 0.57rem;
+}
+.sleepHealthImg{
+	width: 0.44rem;
+	height: 0.44rem;
+	margin: 0 auto;
+	background: url(http://icon.shuiyu365.com/img/product/breathing.png) no-repeat;
+	background-size: 100% 100%;
+}
+.hearingthImg{
+	width: 0.44rem;
+	height: 0.44rem;
+	margin: 0 auto;
+	background: url(http://icon.shuiyu365.com/img/product/hearing.png) no-repeat;
+	background-size: 100% 100%;
+}
+.bloodImg{
+	width: 0.44rem;
+	height: 0.44rem;
+	margin: 0 auto;
+	background: url(http://icon.shuiyu365.com/img/product/blood.png) no-repeat;
+	background-size: 100% 100%;
+}
+.fetalHeartImg{
+	width: 0.44rem;
+	height: 0.44rem;
+	margin: 0 auto;
+	background: url(http://icon.shuiyu365.com/img/product/fetal.png) no-repeat;
+	background-size: 100% 100%;
+}
+.onlinePhImg{
+	width: 0.44rem;
+	height: 0.44rem;
+	margin: 0 auto;
+	background: url(http://icon.shuiyu365.com/img/product/online.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.sleepHealthContent{
+	width: 100%;
+	background: url(http://icon.shuiyu365.com/img/product/sleep_banner1.png)no-repeat;
+	background-size: 100% 100%;
+}
+.sleepContent{
+	height: 4.8rem;
+	width: 12rem;
+	margin: 0 auto;
+	position: relative;
+}
+.sleepContentWord{
+	position: absolute;
+	width: 100%;
+	height: 2.8rem;
+	margin-top: 1rem;
+	animation:sleep 1s forwards ;
+}
+@keyframes sleep{
+	from{
+		margin-left: -5rem;
+	}to{
+		margin-left: 0rem;
+	}
+}
+.Label{
+	font-size: 0.16rem;
+	color: #ffffff;
+}
+.title{
+	font-size: 0.3rem;
+	color: #ffffff;
+	padding-top: 0.15rem;
+}
+.content{
+	font-size: 0.14rem;
+	color: #ffffff;
+	line-height: 0.1rem;
+	padding-top: 0.24rem;
+}
+.seeDetails{
+	width: 1.21rem;
+	background-color: #f04d4e;
+	margin-top: 0.28rem;
+	font-size: 0.14rem;
+	color: #ffffff;
+	padding-top: 0.1rem;
+	padding-bottom: 0.09rem;
+	text-align: center;
+	cursor: pointer;
+}
+.seeDetails:hover{
+	transform: scale(1.2, 1.2); /* 放大2倍 */
+}
+.sleepProduct{
+	width: 100%;
+	height: 3.58rem;
+	margin-top: 0.4rem;
+	margin-bottom: 0.5rem;
+}
+.sleepProductContent{
+	width: 12rem;
+	margin: 0 auto;
+	opacity: 0;
+}
+.cpapImgPic{
+	position: absolute;
+	width: 100%;
+	height: 1.98rem;
+	margin-top: 0.4rem;
+	background: url(http://icon.shuiyu365.com/img/product/CPAP.png)no-repeat;
+	background-position: center;
+}
+.apapImgPic{
+	position: absolute;
+	width: 100%;
+	height: 1.98rem;
+	margin-top: 0.4rem;
+	background: url(http://icon.shuiyu365.com/img/product/APAP.png)no-repeat;
+	background-position: center;
+}
+.st25ImgPic{
+	position: absolute;
+	width: 100%;
+	height: 1.98rem;
+	margin-top: 0.4rem;
+	background: url(http://icon.shuiyu365.com/img/product/ST25.png)no-repeat;
+	background-position: center;
+}
+.st30ImgPic{
+	position: absolute;
+	width: 100%;
+	height: 1.98rem;
+	margin-top: 0.4rem;
+	background: url(http://icon.shuiyu365.com/img/product/ST30.png)no-repeat;
+	background-position: center;
+}
+@keyframes opcit{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.autoSet{
+	width: 2.8rem;
+	height: 3.58rem;
+	border: solid 0.01rem #e2e2e2;
+	float: left;
+	cursor: pointer;
+}
+.autoSetImg{
+	width: 2.8rem;
+	height: 2.64rem;
+	position: relative;
+}
+.autoSet:hover{
+	margin-top: -0.15rem;	
+	-webkit-transform:scale(1.03);
+	-moz-transform:scale(1.03);
+	-ms-transform:scale(1.03);
+	transform:scale(1.03);
+	position: relative;
+	z-index: 5;
+}
+.autoSetImgTitle{
+	position: absolute;
+	width: 0.77rem;
+	height: 0.24rem;
+	background-image: linear-gradient(180deg, 
+		rgba(23, 176, 176, 0.85) 0%, 
+		rgba(0, 157, 208, 0.85) 100%), 
+	linear-gradient(
+		#1c9f9f, 
+		#1c9f9f);
+	font-size: 0.14rem;
+	line-height: 0.24rem;
+	color: #ffffff;
+	text-align: center;
+	margin-left: 0.16rem;
+	margin-top: 0.17rem;
+}
+.autoSetImgPic{
+	position: absolute;
+	width: 100%;
+	height: 1.98rem;
+	margin-top: 0.4rem;
+	background: url(http://icon.shuiyu365.com/img/product/AutoSet.png)no-repeat;
+	background-position: center;
+}
+.auto25ImgPic{
+	position: absolute;
+	width: 100%;
+	height: 1.98rem;
+	margin-top: 0.4rem;
+	background: url(http://icon.shuiyu365.com/img/product/Auto25.png)no-repeat;
+	background-position: center;
+}
+.vapapImgPic{
+	position: absolute;
+	width: 1.77rem;
+	height: 1.6rem;
+	margin-top: 0.6rem;
+	margin-left: 0.515rem;
+	background: url(http://icon.shuiyu365.com/img/product/VPAV-IV-ST.png)no-repeat center;
+	background-size: 100% 100%;
+	background-position: center center;
+}
+.s9vpapImgPic{
+	position: absolute;
+	width: 100%;
+	height: 1.98rem;
+	margin-top: 0.4rem;
+	background: url(http://icon.shuiyu365.com/img/product/S9VPAPST.png)no-repeat;
+	background-position: center;
+}
+.autoSetImgName{
+	width: 100%;
+	font-size: 0.16rem;
+	color: #313131;
+	text-align: center;
+	margin-top: 2.4rem;
+	position: absolute;
+}
+.autoSetWord{
+	width: 100%;
+	height: 0.94rem;
+	background-color: #eeeeee;
+	position: relative;
+}
+.autoSetWordTitle{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-size: 0.16rem;
+	color: #6c6c6c;
+	margin-top: 0.29rem;
+}
+.autoSetWordHover{
+	margin: 0 auto;
+	width: 100%;
+	height: 1rem;
+	background-color: #eeeeee;
+	display: none;
+}
+.active{
+	transform: scale(5,5);
+	border-radius: 50%;
+	background-color: #ef5621;
+}
+.autoSetWordHoverMore{
+	position: absolute;
+	width: 1.04rem;
+	height: 0.28rem;
+	background-color: #f04d4e;
+	font-size: 0.14rem;
+	color: #ffffff;
+	line-height: 0.3rem;
+	text-align: center;
+	margin-top: 0.34rem;
+	margin-left: 0.88rem;
+}
+.auto25{
+	width: 2.8rem;
+	height: 3.58rem;
+	border: solid 0.01rem #e2e2e2;
+	margin-left: 0.25rem;
+	float: left;
+	cursor: pointer;
+}
+.auto25:hover{
+	margin-top: -0.15rem;
+	-webkit-transform:scale(1.03);
+	-moz-transform:scale(1.03);
+	-ms-transform:scale(1.03);
+	transform:scale(1.03);
+	position: relative;
+	z-index: 5;
+}
+.vpap{
+	width: 2.8rem;
+	height: 3.58rem;
+	border: solid 0.01rem #e2e2e2;
+	margin-left: 0.25rem;
+	float: left;
+	cursor: pointer;
+}
+.vpap:hover{
+	margin-top: -0.15rem;	
+	-webkit-transform:scale(1.03);
+	-moz-transform:scale(1.03);
+	-ms-transform:scale(1.03);
+	transform:scale(1.03);
+	position: relative;
+	z-index: 5;
+}
+.s9vpap{
+	width: 2.8rem;
+	height: 3.58rem;
+	border: solid 0.01rem #e2e2e2;
+	margin-left: 9.2rem;
+	float: left;
+	cursor: pointer;
+	margin-top: -3.6rem;
+}
+.s9vpap:hover{
+	margin-top: -3.75rem;	
+	-webkit-transform:scale(1.03);
+	-moz-transform:scale(1.03);
+	-ms-transform:scale(1.03);
+	transform:scale(1.03);
+	position: relative;
+	z-index: 5;
+}
+.BreatheContent{
+	width: 100%;
+	height: 4.2rem;
+	margin-top: 0.46rem;
+	background-color: #7d7d7d;
+	background: url(http://icon.shuiyu365.com/img/product/breath_banner2.png)no-repeat;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+.BreatheTitle{
+	width: 12rem;
+	margin: 0 auto;
+	opacity: 0;
+}
+.LabelTwo{
+	font-size: 0.16rem;
+	color: #4e4e4e;
+}
+.titleTwo{
+	font-size: 0.3rem;
+	color: #4e4e4e;
+	padding-top: 0.15rem;
+}
+.contentTwo{
+	font-size: 0.14rem;
+	color: #4e4e4e;
+	line-height: 0.1rem;
+	padding-top: 0.24rem;
+}
+.BreatheTitleLeft{
+	width: 12rem;
+	margin: 0 auto;
+	height: 2.8rem;
+	margin-left: -6rem;
+	margin-top: 0.7rem;
+	animation:leftleft 1s forwards ;
+}
+@keyframes leftleft{
+	form{
+		margin-left: -6rem;
+	}to{
+		margin-left: 0.3rem;
+	}
+}
+.BreatheTitleRight{
+	width: 3.83rem;
+	height: 3.09rem;
+	background: url(http://icon.shuiyu365.com/img/product/SimpleBreth.png)no-repeat;
+	background-size: 100% 100%;
+	margin-top: -3rem;
+	margin-left: 13rem;
+	animation:rightleft 1s forwards;
+}
+.productkong{
+	width: 100%;
+	height: 0.02rem;
+	background-color: #f4f4f4;
+	margin-top: 0.4rem;
+}
+@keyframes rightleft{
+	form{
+		margin-left: 13rem;
+	}to{
+		margin-left: 8rem;
+	}
+}
+.hearingHealthbox{
+	width: 100%;
+	height: 4.09rem;
+}
+.originalSound{
+	width: 12rem;
+	margin: 0 auto;
+}
+.originalSoundOne{
+	width: 12rem;
+	margin: 0 auto;
+	opacity: 0;
+}
+.fengli{
+	width: 12rem;
+	margin: 0 auto;
+	opacity: 0;
+}
+.Situation{
+	width: 12rem;
+	margin: 0 auto;
+	opacity: 0;
+}
+.Situationleft{
+	width: 4.65rem;
+	height: 4.01rem;
+	margin-top: 0.5rem;
+}
+.Situationright{
+	width: 4.72rem;
+	margin-left: 6rem;
+	float: left;
+	margin-top: -3.11rem;
+}
+.originalSoundLeft{
+	width: 4.72rem;
+	float: left;
+	position: absolute;
+	margin-top: 0.99rem;
+}
+.fengliLeft{
+	width: 4.72rem;
+	float: left;
+	position: absolute;
+	margin-top: 0.99rem;
+}
+.fengliRight{
+	width: 4.65rem;
+	height: 4.01rem;
+	margin-left: 7rem;
+	margin-top: 0.5rem;
+	position: absolute;
+}
+.productName{
+	font-size: 0.16rem;
+	line-height: 0.24rem;;
+	color: #4e4e4e;
+}
+.productFeatures{
+	font-size: 0.3rem;
+	font-weight: bold;
+	color: #4e4e4e;
+}
+.productDetail{
+	font-size: 0.14rem;
+	color: #4e4e4e;
+	padding-top: 0.32rem;
+}
+.understandMore{
+	cursor: pointer;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	background-color: #f04d4e;
+	opacity: 0.95;
+	font-size: 0.14rem;
+	color: #ffffff;
+	display: table; /*重点就是这个属性,这个样式会告知浏览器当前元素的宽度,采用最小的宽度.不是默认全宽*/
+	padding-top: 0.05rem;
+	padding-bottom: 0.05rem;
+	padding-right: 0.25rem;
+	padding-left: 0.21rem;
+}
+.understandMore:hover{
+	-webkit-transform:scale(1.03);
+	-moz-transform:scale(1.03);
+	-ms-transform:scale(1.03);
+	transform:scale(1.03);
+	position: relative;
+	z-index: 5;
+}
+.originalSoundRight{
+	width: 4rem;
+	height: 4rem;
+	margin-left: 6rem;
+	position: absolute;
+}
+.productImg{
+	width: 4rem;
+	height: 4rem;
+	position: absolute;
+	margin-top: -0.2rem;	
+}
+.onlinePharmacybox{
+	width: 100%;
+	height: 5rem;
+	background: url(http://icon.shuiyu365.com/img/product/shijingBG.png)no-repeat;
+	background-size: 100% 100%;
+}
+.onlinePharmacyLeft{
+	position: absolute;
+	width: 5rem;
+	height: 3rem;
+	margin-top: 1rem;
+}
+.productNamePharmacy{
+	font-size: 0.24rem;
+	color: #4e4e4e;
+}
+.productFeaturesPharmacy{
+	font-size: 0.6rem;
+	font-weight: bold;
+	color: #4e4e4e;
+}
+.productDetailPharmacy{
+	font-size: 0.14rem;
+	color: #4e4e4e;
+	padding-top: 0.32rem;
+}
+.chainPharmacyContent{
+	width: 12rem;
+	position: relative;
+	margin: 0 auto;
+	height: 2.67rem;
+}
+.Timepharmacy{
+	margin-top: 0.43rem;
+}
+.xixi{
+	width: 2.34rem;
+	height: 2.24rem;
+	float: left;
+}
+.xixiImg{
+	width: 100%;
+	height: 1.84rem;
+	background: url(http://icon.shuiyu365.com/img/product/xixi.png)no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+.xixiImg:hover{
+	background-size: 110% 110%;
+}
+.xixiWord{
+	width: 100%;
+	height: 0.4rem;
+	background-color: #eeeeee; 
+	font-family: SourceHanSansCN-Regular;
+	font-size: 0.16rem;
+	line-height: 0.4rem;
+	color: #535353;
+	text-align: center;
+}
+.youyi{
+	width: 2.34rem;
+	height: 2.24rem;
+	background-color: orange; 
+	float: left;
+	margin-left: 0.05rem;
+}
+.youyiImg{
+	width: 100%;
+	height: 1.84rem;
+	background: url(http://icon.shuiyu365.com/img/product/youyi.png)no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+.youyiImg:hover{
+	background-size: 110% 110%;
+}
+.shuiyin{
+	width: 2.34rem;
+	height: 2.24rem;
+	background-color: yellow; 
+	float: left;
+	margin-left: 0.05rem;
+}
+.shuiyinImg{
+	width: 100%;
+	height: 1.84rem;
+	background: url(http://icon.shuiyu365.com/img/product/shuiyin.png)no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+.shuiyinImg:hover{
+	background-size: 110% 110%;
+}
+.pingfeng{
+	width: 2.34rem;
+	height: 2.24rem;
+	background-color: green; 
+	float: left;
+	margin-left: 0.05rem;
+}
+.pingfengImg{
+	width: 100%;
+	height: 1.84rem;
+	background: url(http://icon.shuiyu365.com/img/product/pingfeng.png)no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+.pingfengImg:hover{
+	background-size: 110% 110%;
+}
+.liuxia{
+	width: 2.34rem;
+	height: 2.24rem;
+	background-color: greenyellow; 
+	float: left;
+	margin-left: 0.05rem;
+}
+.liuxiaImg{
+	width: 100%;
+	height: 1.84rem;
+	background: url(http://icon.shuiyu365.com/img/product/liuxia.png)no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+.liuxiaImg:hover{
+	background-size: 110% 110%;
+}
+.yuntaixin{
+	width: 2.07rem;
+	height: 2.07rem;
+	margin-top: 1rem;
+	margin-left: 1rem;	
+	border-radius: 0.45rem;
+}
+.productImg:hover{
+	-webkit-transform:scale(1.1);
+	-moz-transform:scale(1.1);
+	-ms-transform:scale(1.1);
+	transform:scale(1.1);
+	position: relative;
+	z-index: 5;
+}
+.yuntaixinRight:hover{
+	-webkit-transform:scale(1.1);
+	-moz-transform:scale(1.1);
+	-ms-transform:scale(1.1);
+	transform:scale(1.1);
+	position: relative;
+	z-index: 5;
+}
+.yuntaixinRight{
+	width: 4rem;
+	height: 4rem;
+	margin-left: 6rem;
+	position: absolute;
+}
+.yuntaixin{
+	width: 4.07rem;
+	height: 4.07rem;
+	margin-top: 0.5rem;
+	position: absolute;
+}

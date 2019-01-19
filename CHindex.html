@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <!-- <script>
+                window.location.href = /Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent) ? "./mobileChIndex.html" :  "./CHindex.html";
+                (function () {
+                 var UA = window.navigator.userAgent.toLowerCase();
+                 var toMobile = function () {
+                    window.location.href = './mobileChIndex.html'
+                 }
+                 if (UA.indexOf("windows phone") > -1) return toMobile(); // Windows Phone
+                 if (UA.indexOf("android") > 0) return toMobile(); // Andriod
+                 if (/ip(ad|hone|od)/.test(UA)) return toMobile(); // IOS
+                 if (UA.indexOf("bb10") > 0) return toMobile() // BlackBerry
+               })();
+            </script> -->
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="http://icon.shuiyu365.com/bitbug_favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/CHindex.css" type="text/css">
+    <link rel="stylesheet" href="css/footer.css" >
+    <title>谁与医疗科技（杭州）有限公司</title>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="https://cdn.bootcss.com/animate.css/3.7.0/animate.min.css" rel="stylesheet" media="all">
+    <link href="css/bootstrap-touch-slider.css" rel="stylesheet" media="all">
+    
+    <script>
+        //产生验证码 
+        window.onload = function() {
+            createCode()
+        }
+        var code; //在全局定义验证码 
+        function createCode() {
+            code = "";
+            var codeLength = 4; //验证码的长度 
+            var checkCode = document.getElementById("code");
+            var random = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+              'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); //随机数 
+            for(var i = 0; i < codeLength; i++) { //循环操作 
+                var index = Math.floor(Math.random() * 36); //取得随机数的索引（0~35） 
+                code += random[index]; //根据索引取得随机数加到code上 
+            }
+            checkCode.value = code; //把code值赋给验证码 
+        }
+        //校验验证码 
+        function validate() {
+            var inputCode = document.getElementById("ctl00_txtcode").value.toUpperCase(); //获取输入框内验证码并转化为大写  
+            if(inputCode.length <= 0) { //若输入的验证码长度为0 
+             alert("请输入验证码！"); //则弹出请输入验证码 
+            } 
+            else if(inputCode != code) { //若输入的验证码与产生的验证码不一致时 
+             alert("验证码输入错误!"); //则弹出验证码输入错误 
+             createCode(); //刷新验证码 
+             document.getElementById("ctl00_txtcode").value = "";//清空文本框 
+            } else { 
+                console.log("输入成功");
+            }
+        }
+        // 验证邮箱
+        function verification(){
+            var temp = document.getElementById("email");                 //对电子邮件的验证   
+            var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;                
+            if (!myreg.test(temp.value)) {                    
+                // $("#intererrmsg").show();                    
+                // $("#intermsg").html("请输入正确的用户名！");      
+                alert("请输入正确的用户名")              
+                    return false;                
+            }
+        }
+    </script>
+    
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="top" id="topnav">
+        <div class="topContent">
+            <div class="topcontentleft">
+                <a href="CHindex.html"><div class="logo"></div></a> 
+                <p class="logoWord" id="logoword">让生命更健康</p>
+                <p class="logoEnword" id="logoEnword">MAKE LIFE HEALTHIER</p>
+            </div>
+            <div class="topcontentright">
+                <div id="change"><a href="index.html"><img src="http://icon.shuiyu365.com/switch.png" alt=""></a></div>
+                <div class="nav" id="nav">
+                    <div class="home"><a href="CHindex.html" class="homea" id="home">首页</a></div>
+                    <div class="Separate">|</div>
+                    <div class="aboutUs"><a href="CHaboutUs.html" class="abouta" id="abouts">关于我们</a></div>
+                    <div class="Separate">|</div>
+                    <div class="productDescription"><a href="CHproduct.html" class="producta" id="product">产品介绍</a></div>                    
+                    <div class="Separate">|</div>
+                    <div class="careerDevelopment"><a href="CHrecruitment.html" class="recursiona" id="recursiona">职业发展</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 轮播图 -->
+    <div class="g-banner" id="banner">
+        <div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000" >
+            <ol class="carousel-indicators">
+                <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+                <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="http://icon.shuiyu365.com/img/index/banner1.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                    <div class="topWord">
+                        <div class="word">
+                            <div class="topwordTitle">MAKE LIFE HEATHIER</div>
+                            <div class="border"></div>
+                            <p class="wordtitle">我们只专注一件事 让生命更健康</p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="item">
+                    <img src="http://icon.shuiyu365.com/img/index/banner2.png" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                    <div class="bottomWord">
+                        <div class="word">
+                            <div class="topwordTitle">MAKE LIFE HEATHIER</div>
+                            <div class="border"></div>
+                            <p class="wordtitle">能量可以相互传递 脉脉相通 生生不息</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+                <span class="fa fa-angle-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+                <span class="fa fa-angle-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>  
+    <!-- 主要业务领域 -->
+    <div class="mainBusiness" id="mainBusiness">
+        <p class="mainBusinessTitle">主要业务领域</p>
+        <p class="mainBusinessDetail">挖掘需求，开拓创新，重新定义未来科技生活</p>
+        <div class="business">
+            <a href="CHproduct.html" target="_blank">
+                <div class="breathe" id="breathe">
+                    <div class="breatheImg" id="breatheImg"></div>
+                    <div class="breatheWord">
+                        <p>呼吸健康</p>
+                    </div>
+                </div>
+            </a>
+            <a href="CHproduct.html?a" target="_blank">
+                <div class="hearing" id="hearing">
+                    <div class="hearingImg" id="hearingImg"></div>
+                    <div class="hearingWord">
+                        <p>听力健康</p>
+                    </div>
+                </div>
+            </a>
+            <a href="CHproduct.html?c" target="_blank">
+                <div class="bloodSugar" id="bloodSugar">
+                    <div class="bloodSugarImg" id="bloodSugarImg"></div>
+                    <div class="bloodSugarWord">
+                        <p>血糖健康</p>
+                    </div>
+                </div>
+            </a>
+            <a href="CHproduct.html?d" target="_blank">
+                <div class="drug" id="drug">
+                    <div class="drugImg" id="drugImg"></div>
+                    <div class="drugWord">
+                        <p>药品</p>
+                    </div>
+                </div>
+            </a>
+            <a href="CHproduct.html?e" target="_blank">
+                <div class="fetalHeart" id="fetalHeart">
+                    <div class="fetalHeartImg" id="fetalHeartImg"></div>
+                    <div class="fetalHeartWord">
+                        <p>胎心监护</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- 核心团队 -->
+    <div class="mainTeam" id="mainTeam">
+        <p class="mainTeamTitle">核心团队</p>
+        <p class="mainTeamDetail">团队协作，专业技术，执着追求完美顾客体验</p>
+        <div class="cloud-product">
+            <ul class="cloud-product-ul clearfix">
+                <li data-index="1" class="active">
+                    <div class="normal-inner">
+                        <div class="cloud-product-single-bottom clearfix" id="t1">
+                            <div class="server-header-01"></div>
+                            <h2 class="product-introduce-title">资深运营</h2>
+                        </div>
+                    </div>
+                    <div class="active-inner active-inner-01 clearfix">
+                        <div class="active-inner-item">
+                            <div class="server-header-active-01"></div>
+                            <h2 class="Experienced">资深运营</h2>
+                            <div class="product-introduce-list">
+                                <p class="introduce-list-large">团队项目策划执行力极强，先后开展呼吸、听力、血糖、药品等多个项目，细分市场，了解用户需求，从文案到设计整体把控，拥有丰富的项目运营经验</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-index="2">
+                    <div class="normal-inner">
+                        <div class="cloud-product-single-bottom clearfix" id="t2">
+                            <div class="server-header-02"></div>
+                            <h2 class="product-introduce-title">专业药师</h2>
+                        </div>
+                    </div>
+                    <div class="active-inner active-inner-02 clearfix">
+                        <div class="active-inner-item">
+                            <div class="server-header-active-02"></div>
+                            <h2 class="professional">专业药师</h2>
+                            <div class="product-introduce-list">
+                                <p class="introduce-list-large">拥有医药学习背景，专业领域出色，在强大的知识基础上灵活运用销售技能和客户进行有效沟通，在双11等传统电商活动中完成出色销售业绩</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-index="3">
+                    <div class="normal-inner">
+                        <div class="cloud-product-single-bottom clearfix" id="t3">
+                            <div class="bg-product-pic  server-header-03"></div>
+                            <h2 class="product-introduce-title">资深设计</h2>
+                        </div>
+                    </div>
+                    <div class="active-inner active-inner-03 clearfix">
+                        <div class="active-inner-item">
+                            <a class="introduce-link" target="_blank" href="#"></a>
+                            <div class="empty-space">
+                                <div class="bg-product-pic server-header-active-03"></div>
+                            </div>
+                            <h2 class="designer">资深设计</h2>
+                            <div class="product-introduce-list">
+                                <p class="introduce-list-large">平均从业年限三年，对市场分析和视觉趋势走向极度敏感，参与多个项目策划设计工作，为公司品牌打造奠定扎实基础。</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-index="4">
+                    <div class="normal-inner">
+                        <div class="cloud-product-single-bottom clearfix" id="t4">
+                            <div class="empty-space">
+                                <div class="bg-product-pic  server-header-04"></div>
+                            </div>
+                            <h2 class="product-introduce-title"> 内容运营</h2>
+                        </div>
+                    </div>
+                    <div class="active-inner  active-inner-04 clearfix">
+                        <div class="active-inner-item">
+                            <a class="introduce-link" target="_blank" href="#"></a>
+                            <div class="bg-product-pic server-header-active-04"></div>
+                            <h2 class="website">内容运营</h2>
+                            <div class="product-introduce-list">
+                                <p class="introduce-list-large">阿里健康指定内容运营商，为品牌和官方提供图文，直播，短视频等综合的解决方案，在医药领域专业度名列前茅。</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-index="5">
+                    <div class="normal-inner">
+                        <div class="cloud-product-single-bottom clearfix" id="t5">
+                            <div class="bg-product-pic server-header-05"></div>
+                            <h2 class="product-introduce-title"> 技术开发</h2>
+                        </div>
+                    </div>
+                    <div class="active-inner active-inner-05 clearfix">
+                        <div class="active-inner-item">
+                            <a class="introduce-link" target="_blank" href="#"></a>
+                            <div class="empty-space">
+                                <div class="bg-product-pic server-header-active-05"></div>
+                            </div>
+                            <h2 class="technology">技术开发</h2>
+                            <div class="product-introduce-list">
+                                <p class="introduce-list-large">集中承担软件开发、网页制作及APP制作等工作，独立开发“移动互联网远程胎儿监护平台”，为降低妊娠风险带来了新的技术支持</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 关于我们 -->
+    <div class="aboutOurs" id="aboutOurs">
+        <div class="aboutOursTitle">关于我们</div>
+        <div class="aboutOursDetail">与人为善，与人健康，帮更多人重获健康生命</div>
+        <div class="aboutOursContent">
+            &nbsp;&nbsp;&nbsp;&nbsp;谁与医疗科技有限公司自2013年创立以来，专注于医药大健康事业，以“让生命更健康”为企业使命，将健康的理念和新型的健康品带入千万家庭，竭诚打造一个全面医药的大健康生态圈。
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;总部设于杭州下沙，谁与和多个国家医疗产业的知名品牌开展深度合作，打造线上线下联动的推广模式，擅长线上品宣及推广促进全市场产品销售，帮助企业实现业务快速增长，目前运营的品牌包括瑞思迈、凯迪泰、中德等多个知名名牌的产品，多年来销售实现快速增长。同时谁与孵化有“时景”，“原声”等自主品牌，“时景”取之古代著名医药学家李时珍之名“时”，张仲景之名“景”寓意做医药互联网中的专家，“时景”品牌旗下有时景大药房连锁有限公司，融合互联网特质，成功打造互联网+药品的新型O2O新型连锁大药房，方便了患者与医务人员，极大节约了社会资源。
+        </div>
+        <div class="more"> <a href="CHaboutUs.html">MORE+</a> </div>
+        <div class="kong"></div>
+    </div>
+    <!-- 合作品牌 -->
+    <div class="cooperationBrand" id="cooperationBrand">
+        <div class="cooperationBrandTitle">合作品牌</div>
+        <div class="cooperationBrandDetail">深度合作，别树一帜，共创更具竞争力的价值</div>
+        <div class="brand">
+            <div class="numberOne">
+                <div class="huirui">
+                    <div id="huiruiLogo" class="amplification"></div>
+                </div>
+                <div class="jinge">
+                    <div id="jingeLogo" class="amplification"></div>
+                </div>
+                <div class="xiaili">
+                    <div id="xiailiLogo" class="amplification"></div>
+                </div>
+                <div class="enganding">
+                    <div id="engandingLogo" class="amplification"></div>
+                </div>
+                <div class="haizheng">
+                    <div id="haizhengLogo" class="amplification"></div>
+                </div>
+                <div class="xiuzheng">
+                    <div id="xiuzhengLogo" class="amplification"></div>
+                </div>
+            </div>
+            <div class="numberTwo">
+                <div class="qingchunbao">
+                    <div id="qingchunbaoLogo" class="amplification"></div>
+                </div>
+                <div class="jiuzhitang">
+                    <div id="jiuzhitangLogo" class="amplification"></div>
+                </div>
+                <div class="shuheng">
+                    <div id="shuhengLogo" class="amplification"></div>
+                </div>
+                <div class="yuyue">
+                    <div id="yuyueLogo" class="amplification"></div>
+                </div>
+                <div class="bidi">
+                    <div id="bidiLogo" class="amplification"></div>
+                </div>
+                <div class="duleisi">
+                    <div id="duleisiLogo" class="amplification"></div>
+                </div>
+            </div>
+            <div class="numberTwo">
+                <div class="jieshibang">
+                    <div id="jieshibangLogo" class="amplification"></div>
+                </div>
+                <div class="yuansheng">
+                    <div id="yuanshengLogo" class="amplification"></div>
+                </div>
+                <div class="zhongde">
+                    <div id="zhongdeLogo" class="amplification"></div>
+                </div>
+                <div class="ximenzi">
+                    <div id="ximenziLogo" class="amplification"></div>
+                </div>
+                <div class="fengli">
+                    <div id="fengliLogo" class="amplification"></div>
+                </div>
+                <div class="ruishengda">
+                    <div id="ruishengdaLogo" class="amplification"></div>
+                </div>
+            </div>
+            <div class="numberTwo">
+                <div class="didake">
+                    <div id="didakeLogo" class="amplification"></div>
+                </div>
+                <div class="aodiya">
+                    <div id="aodiyaLogo" class="amplification"></div>
+                </div>
+                <div class="oushida">
+                    <div id="oushidaLogo" class="amplification"></div>
+                </div>
+                <div class="weiting">
+                    <div id="weitingLogo" class="amplification"></div>
+                </div>
+                <div class="kuaishuer">
+                    <div id="kuaishuerLogo" class="amplification"></div>
+                </div>
+                <div class="bukele ">
+                    <div id="bukeleLogo" class="amplification"></div>
+                </div>
+            </div>
+            <div class="numberTwo">
+                <div class="aiyun">
+                    <div id="aiyunLogo" class="amplification"></div>
+                </div>
+                <div class="shiyuebaobei">
+                    <div id="shiyuebaobeiLogo" class="amplification"></div>
+                </div>
+                <div class="ruisimai">
+                    <div id="ruisimaiLogo" class="amplification"></div>
+                </div>
+                <div class="kaiditai">
+                    <div id="kaiditaiLogo" class="amplification"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部留言板 -->
+    <div class="foot">
+        <div class="footContent">
+            <div class="footLeft">
+                <p class="companyName">谁与医疗科技（杭州）有限公司</p>
+                <p class="URL">网址:www.shuiyu365.com</p>
+                <p class="phone">电话:0571-86879711</p>
+                <p class="email">邮箱:HRhr@shuiyu365.com</p>
+                <p class="address">地址:杭州市下沙科技园路20号新加坡科技园9幢1101室</p>
+                <div class="twoCode"></div>
+                <p class="attention">扫一扫添加关注</p>
+            </div>
+            <div class="footRight">
+                <div class="messageTitle">-留言后我们会尽快与您联系-</div>
+                <div class="Name">姓名: 
+                <br>
+                <input type="text" class="NameInput" id="name" value=""></div>
+                <div class="messageContent">留言: 
+                <br>    
+                <textarea  type="text" class="messageContentInput" id="message"></textarea></div>
+                <div class="Email">邮箱: 
+                <br>
+                <input type="text" class="EmailInput" id="email" onblur="verification()"> </div>
+                <div class="verification">
+                    验证:
+                    <br>
+                    <input type="text" id="ctl00_txtcode" onblur="validate()"/>
+                    <input type="button" id="code" />
+                    <span onclick="createCode()" class="change">看不清，换一张</span>
+                </div>
+                <div class="tijiao" id="submit">提交留言</div>
+                <div class="tijiao" id="cancel">取消</div>
+            </div>
+        </div> 
+        <div class="Remarks">
+                <p class="RemarksContent">版权所有：谁与医疗科技（杭州）有限公司  京ICP备：2018-0034号  技术支持：谁与开发部</p>
+            </div> 
+    </div>
+</body>
+
+<script src="js/jquery-1.11.0.min.js" ></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.touchSwipe.min.js"></script>
+<script src="js/bootstrap-touch-slider.js"></script>
+<script src="js/serRem.js"></script>
+
+<script type="text/javascript">
+    $('#bootstrap-touch-slider').bsTouchSlider(); 
+</script>
+<script src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+	    var c=1;																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													
+	    $(".cloud-product-ul>li").mouseenter(function(){
+		    var e=$(this);
+		    c=e.data("index");
+		    var e=$(this);
+		    setTimeout(function(){
+			    if(c==e.data("index")){
+				    $(".cloud-product-ul>li").removeClass("active");
+				    e.addClass("active")
+			    }
+		    },120)
+	    });
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script>
+    $("#cancel").click(function(){
+        $("#name").val("");
+        $("#message").val("");
+        $("#email").val("");
+        $("#ctl00_txtcode").val("");
+    })
+    $('#submit').click(function(){
+        var name = $("#name").val();
+        var message = $("#message").val();
+        var email = $("#email").val();
+    console.log("你在进行留言操作");
+    $.ajax({
+        url:"http://www.shuiyu365.com/shuiyu/message/insMessage",
+        data: {
+            visitorName:name,
+            visitorMailbox:message,
+            message:email,
+        },
+        success:function(res){
+            alert("留言成功")
+            $("#name").val("");
+            $("#message").val("");
+            $("#email").val("");
+            $("#ctl00_txtcode").val("");
+        },
+        error:function(res){
+            console.log("留言失败");
+        } 
+    });
+})
+</script>
+
+</html>

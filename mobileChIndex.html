@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="http://icon.shuiyu365.com/bitbug_favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mobileChIndex.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>谁与移动端</title>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="https://cdn.bootcss.com/animate.css/3.7.0/animate.min.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/choumei.css">
+    <script>
+    //产生验证码 
+    window.onload = function() {
+       createCode()
+   }
+   var code; //在全局定义验证码 
+   function createCode() {
+       code = "";
+       var codeLength = 4; //验证码的长度 
+       var checkCode = document.getElementById("code");
+       var random = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+         'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); //随机数 
+       for(var i = 0; i < codeLength; i++) { //循环操作 
+           var index = Math.floor(Math.random() * 36); //取得随机数的索引（0~35） 
+           code += random[index]; //根据索引取得随机数加到code上 
+       }
+       checkCode.value = code; //把code值赋给验证码 
+   }
+   //校验验证码 
+   function validate() {
+       var inputCode = document.getElementById("ctl00_txtcode").value.toUpperCase(); //获取输入框内验证码并转化为大写  
+       if(inputCode.length <= 0) { //若输入的验证码长度为0 
+        alert("请输入验证码！"); //则弹出请输入验证码 
+       } 
+       else if(inputCode != code) { //若输入的验证码与产生的验证码不一致时 
+        alert("验证码输入错误!"); //则弹出验证码输入错误 
+        createCode(); //刷新验证码 
+        document.getElementById("ctl00_txtcode").value = "";//清空文本框 
+       } else { 
+           console.log("输入成功");
+       }
+   }
+   // 验证邮箱
+   function verification(){
+       var temp = document.getElementById("email");//对电子邮件的验证   
+       var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;                
+       if (!myreg.test(temp.value)) {                    
+           // $("#intererrmsg").show();                    
+           // $("#intermsg").html("请输入正确的用户名！");      
+           alert("请输入正确的用户名")              
+               return false;                
+       }
+   }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo"></div>
+            <div class="titlelogo">
+                <p class="titlelogoCH">让生命更健康</p>
+                <p class="titlelogoEN">MAKE LIFE HEALTHIER</p>
+            </div>
+            <div class="language">
+                EN
+            </div>
+            <div class="choose">
+               
+            </div>
+        </div>
+        <div class="g-banner">
+        <div id="bootstrap-touch-slider" class=" bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000" >
+            <ol class="carousel-indicators">
+                <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+                <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="http://icon.shuiyu365.com/img/index/banner1.jpg" class="slide-image"/>
+                    <div class="topWord">
+                        <div class="word">
+                            <div class="topwordTitle">MAKE LIFE HEATHIER</div>
+                            <div class="border"></div>
+                            <p class="wordtitlet">我们只专注一件事</p>
+                            <p class="wordtitleb">让生命更健康</p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="item">
+                    <img src="http://icon.shuiyu365.com/img/index/banner2.png"  class="slide-image"/>
+                    <div class="bottomWord">
+                        <div class="word">
+                            <div class="topwordTitle">MAKE LIFE HEATHIER</div>
+                            <div class="border"></div>
+                            <p class="wordtitlet">能量可以相互传递 </p>
+                            <p class="wordtitleb">脉脉相通 生生不息</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>  
+    <div class="mainBusiness">
+        <p class="mainBusinessTitle">主要业务领域</p>
+        <p class="mainBusinessDetail">挖掘需求 开拓创新 重新定义未来科技生活</p>
+        <div class="mainBusinessContent">
+            <ul>
+                <li class="breathe breating">
+                    <div class="breatingImg breatheImg"></div>
+                    <p class="breatingWord">呼吸健康</p>                        
+                </li>
+                <li class="breathe hearing">
+                    <div class="breatingImg hearingImg"></div>
+                    <p class="breatingWord">听力健康</p>   
+                </li>
+                <li class="breathe blooding">
+                    <div class="breatingImg bloodImg"></div>
+                    <p class="breatingWord">血糖健康</p>   
+                </li>
+                <li class="breathe chaining">
+                    <div class="breatingImg chainImg"></div>
+                    <p class="breatingWord">药品</p>   
+                </li>
+                <li class="breathe heatring">
+                    <div class="breatingImg fetalImg"></div>
+                    <p class="breatingWord">胎心监护</p>   
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="kong"></div>
+    <div class="mainteam">
+        <p class="mainBusinessTitle " id="mainteamtitle">核心团队</p>
+        <p class="mainBusinessDetail" id="mainteamdetail">团队协作 专业技术 执着追求完美顾客体验</p>
+        <div class="mainteamContent">
+        <div class="swiper-container" >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="main-img">
+                            <div class="main-img-top"></div>
+                            <div class="main-img-bottom"></div>
+                        </div> 
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="main-img">
+                            <div class="main-img-top"></div>
+                            <div class="main-img-bottom"></div>
+                        </div> 
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="main-img">
+                            <div class="main-img-top"></div>
+                            <div class="main-img-bottom"></div>
+                        </div> 
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="main-img">
+                            <div class="main-img-top"></div>
+                            <div class="main-img-bottom"></div>
+                        </div> 
+                    </div>
+                    <div class="swiper-slide">
+                            <div class="main-img">
+                                    <div class="main-img-top"></div>
+                                    <div class="main-img-bottom"></div>
+                                </div> 
+                    </div>
+                    <div class="swiper-slide"><div class="main-img">
+                            <div class="main-img-top"></div>
+                            <div class="main-img-bottom"></div>
+                        </div> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="aboutus">
+        <div class="Separate"></div>
+        <div class="content">
+            <div class="aboutanimation">
+                <div class="aboutusTitle">关于我们</div>
+                <div class="aboutusDetail">与人为善 与人健康 帮更多人重获健康生命</div>
+                <div class="aboutusContent">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;谁与医疗科技有限公司自2013年创立以来，专注于医药大健康事业，以“让生命更健康”为企业使命，将健康的理念和新型的健康品带入千万家庭，竭诚打造一个全面医药的大健康生态圈。</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;总部设于杭州下沙，谁与和多个国家医疗产业的知名品牌开展深度合作，打造线上线下联动的推广模式，擅长线上品宣及推广促进全市场产品销售，帮助企业实现业务快速增长，目前运营的品牌包括瑞思迈、凯迪泰、中德等多个知名名牌的产品.多年来销售实现快速增长。同时谁与孵化有“时景”，“原声”等自主品牌，“时景”取之古代著名医药学家李时珍之名“时”，张仲景之名“景”寓意做医药互联网中的专家，“时景”品牌旗下有时景大药房连锁有限公司，融合互联网特质，成功打造互联网+药品的新型O2O新型连锁大药房，方便了患者与医务人员，极大节约了社会资源。</p>
+                </div>
+                <div class="aboutusbutton">MORE+</div>
+            </div>
+        </div>
+        <div class="Separate"></div>
+    </div>
+    <div class="Cooperation">
+        <p class="CooperationTitle">合作品牌</p>
+        <p class="CooperationDetail">深度合作 别树一帜 共创更具竞争力的价值</p>
+        <div class="brand">
+            <div class="numberOne">
+                <div class="huirui firstRow"></div>
+                <div class="jinge firstRow"></div>
+                <div class="xiaili firstRow"></div>
+                <div class="enganding firstRow"></div>
+            </div>
+            <div class="numberTwo numberOne">
+                <div class="haizheng firstRow"></div>
+                <div class="xiuzheng firstRow"></div>                    
+                <div class="qingchunbao firstRow"></div>
+                <div class="jiuzhitang firstRow"></div>
+            </div>
+            <div class="numberTwo numberOne">
+                <div class="shuheng firstRow"></div>
+                <div class="yuyue firstRow"></div>
+                <div class="bidi firstRow"></div>
+                <div class="duleisi firstRow"></div>    
+            </div>
+            <div class="numberTwo numberOne">
+                <div class="zhongde firstRow"></div>                    
+                <div class="ximenzi firstRow"></div>
+                <div class="jieshibang firstRow"></div>
+                <div class="yuansheng firstRow"></div>
+            </div>
+            <div class="numberTwo numberOne">
+                <div class="fengli firstRow"></div>
+                <div class="ruishengda firstRow"></div>
+                <div class="didake firstRow"></div>
+                <div class="aodiya firstRow"></div>
+            </div>
+            <div class="numberTwo numberOne">
+                <div class="oushida firstRow"></div>
+                <div class="weiting firstRow"></div>
+                <div class="kuaishuer firstRow"></div>
+                <div class="bukele firstRow"></div>
+            </div>
+            <div class="numberTwo numberOne">
+                <div class="aiyun firstRow"></div>
+                <div class="shiyuebaobei firstRow"></div>
+                <div class="ruisimai firstRow"></div>
+                <div class="kaiditai firstRow"></div>
+            </div>
+        </div>
+    </div>
+    <div class="kong"></div>
+    <div class="contactus">
+        <p class="contactusTitle">联系我们</p>
+        <p class="contactusDetail">留言后我们会尽快与您联系</p>
+        <div class="contactusContent">
+            <div class="user">
+                <span class="username">姓名：</span>
+                <input type="text" class="name" style="border: 0px;outline:none;cursor: pointer;">
+            </div>
+            <div class="user">
+                <span class="userMessage username">留言：</span>
+                <input type="text" class="name" style="border: 0px;outline:none;cursor: pointer;">
+            </div>
+            <div class="user">
+                <span class="userEmail username">邮箱：</span>
+                <input type="text" class="name" style="border: 0px;outline:none;cursor: pointer;">
+            </div>
+            <div class="user">
+                <span class="userVerification username">验证：</span>
+                <input type="text" class="verifi" id="ctl00_txtcode" onblur="validate()" style="border: 0px;outline:none;cursor: pointer;">
+                <div class="chan">
+                    <input type="button" id="code" />
+                    <span onclick="createCode()" class="change">看不清，换一张</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kong"></div>
+    <div class="footer">
+        <div class="twocode">
+            <img src="http://icon.shuiyu365.com/twocode.png" alt="">
+        </div>
+        <div class="companyContent">
+            <p class="companyName">谁与医疗科技（杭州）有限公司</p>
+            <p>网址:www.shuiyu365.com</p>
+            <p>电话:0571-86879711</p>
+            <p>邮箱:HRhr@shuiyu365.com</p>
+            <p>地址:杭州市下沙科技园路20号新加坡科技园9幢1101室</p>
+        </div>
+    </div>
+    <div class="footbottom">京ICP备：2018-0034号 技术支持：谁与开发部</div>
+    </div>
+</body>
+<script src="js/rem+JS.js"></script>
+<script src="js/jquery-1.11.0.min.js" ></script>
+<script src="mobile/JS/mobileChIndex.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-touch-slider.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/choumei.js"></script>
+
+</html>

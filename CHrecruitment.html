@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.location.href = /Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent) ? "#" :  "#";
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="http://icon.shuiyu365.com/bitbug_favicon.ico" />
+    <title>谁与医疗科技（杭州）有限公司-招聘</title>
+    <link rel="stylesheet" href="css/CHrecruitment.css" type="text/css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script>
+        //产生验证码 
+        window.onload = function() {
+            createCode()
+        }
+        var code; //在全局定义验证码 
+        function createCode() {
+            code = "";
+            var codeLength = 4; //验证码的长度 
+            var checkCode = document.getElementById("code");
+            var random = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+              'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); //随机数 
+            for(var i = 0; i < codeLength; i++) { //循环操作 
+                var index = Math.floor(Math.random() * 36); //取得随机数的索引（0~35） 
+                code += random[index]; //根据索引取得随机数加到code上 
+            }
+            checkCode.value = code; //把code值赋给验证码 
+        }
+        //校验验证码 
+        function validate() {
+            var inputCode = document.getElementById("ctl00_txtcode").value.toUpperCase(); //获取输入框内验证码并转化为大写  
+            if(inputCode.length <= 0) { //若输入的验证码长度为0 
+                alert("请输入验证码！"); //则弹出请输入验证码 
+            } 
+            else if(inputCode != code) { //若输入的验证码与产生的验证码不一致时 
+                alert("验证码输入错误!"); //则弹出验证码输入错误 
+                createCode(); //刷新验证码 
+                document.getElementById("ctl00_txtcode").value = "";//清空文本框 
+            } else { 
+                console.log("输入成功");
+            }
+        }
+        // 验证邮箱
+        function verification(){
+            var temp = document.getElementById("email");                 //对电子邮件的验证   
+            var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;                
+            if (!myreg.test(temp.value)) {                    
+                // $("#intererrmsg").show();                    
+                // $("#intermsg").html("请输入正确的用户名！");      
+                alert("请输入正确的用户名")              
+                    return false;                
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- 侧边导航栏 -->
+    <div class="slide" id="slide">
+        <a href="#contactus">
+            <div class="sliderWord" id="sliderbox">
+                <p class="jobDemand" id="jobDemand">岗位需求</p>
+                <div class="focus" id="jobDemandFous"></div>
+                <div class="sliderWordborder" ></div>
+            </div>
+        </a>
+        <a href="#offlineBtn">
+            <div class="sliderWord" id="Learningbox">
+                <p class="Learning" id="Learning">学习发展</p>
+                <div class="focus"  id="LearningFous"></div>
+                <div class="sliderWordborder"></div>
+            </div>
+        </a>
+        <a href="#arrangementTitle">
+            <div class="sliderWord" id="jobsbox">
+                <p class="jobs" id="jobs">灵活工作</p>
+                <div class="focus" id="jobsFous"></div>
+                <div class="sliderWordborder"></div>
+            </div>
+        </a>
+        <a href="#welfareKong">
+            <div class="sliderWord" id="Salarybox">
+                <p class="Salary" id="Salary">薪酬福利</p>
+                <div class="focus" id="SalaryFous"></div>
+                <div class="sliderWordborder"></div>
+            </div>
+        </a>
+    </div>
+     <!-- 导航栏 -->
+    <div class="top" id="topnav">
+        <div class="topContent">
+            <div class="topcontentleft">
+                <a href="CHindex.html"><div class="logo"></div></a> 
+                <p class="logoWord" id="logoword">让生命更健康</p>
+                <p class="logoEnword" id="logoEnword">MAKE LIFE HEALTHIER</p>
+            </div>
+            <div class="topcontentright">
+                <div id="change"><a href="recruitment.html"><img src="http://icon.shuiyu365.com/switch.png" alt=""></a></div>
+                <div class="nav" id="nav">
+                    <div class="home"><a href="CHindex.html" class="homea" id="home">首页</a></div>
+                    <div class="Separate">|</div>
+                    <div class="aboutUs"><a href="CHaboutUs.html" class="abouta" id="abouts">关于我们</a></div>
+                    <div class="Separate">|</div>
+                    <div class="productDescription"><a href="CHproduct.html" class="producta" id="product">产品介绍</a></div>                    
+                    <div class="Separate">|</div>
+                    <div class="careerDevelopment"><a href="CHrecruitment.html" class="recursiona" id="recursiona">职业发展</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner图 -->
+    <div class="carouselMap">
+        <div class="carouselWord">
+            <p class="carouselTitle">虚位以待 合作共赢</p>
+            <div class="xian"></div>
+            <div class="carouselDetail">
+                <p>谁与一直致力于培养和发展优秀的人才</p>
+                <p>我们秉承健康生活的理念，提供成就无限可能的平台</p>
+                <p>一群志同道合的人才能一起承载“让生命更健康”的使命！</p>
+            </div>
+            <div class="contactUS" id="contactus"><a href="https://company.zhaopin.com/CZ590855680.htm" target="_blank" >联系我们 →</a></div>
+        </div>
+    </div>
+    <!-- 需求岗位 -->
+    <div class="container">
+        <div class="demandPost" id="demandPostTitle">
+            <div class="demandPostTitle">需求岗位</div>
+            <p class="demandPostDetail">我们以同样的愿望和健康的生活理念始终致力于人才的发展</p>
+            <div class="demandPostcontent" id="demandPostcontent">
+                <div class="demandPostPharmacist" id="demandPost">
+                    <div class="demandPostPharmacistAvatar">
+                        <div class="Avatar"></div>
+                    </div>
+                    <div class="demandPostPharmacistTitle">
+                        <p>专业线上药师</p>
+                    </div>
+                    <div class="demandPostPharmacistDetail">
+                        <p>灵活的销售头脑 专业的产品知识</p>
+                        <p>良好的服务意识  耐心的指导</p>
+                        <p>突发情况处变不惊 换位思考 诚实谨慎</p>
+                    </div>
+                    <div class="demandPostPharmacistBtn" id="demandPostBtn"> <a href="https://company.zhaopin.com/CZ590855680.htm" target="_blank" id="fontcolor">Click Here</a></div>
+                </div>
+                <div class="Experienced" id="Experienced">
+                    <div class="demandPostPharmacistAvatar">
+                        <div class="ExperienAvatar"></div>
+                    </div>
+                    <div class="ExperiencedTitle">
+                        <p>资深运营</p>
+                    </div>
+                    <div class="ExperiencedDetail">
+                        <p>超强数据分析能力清晰的产品策划思路</p>
+                        <p>市场情况需跟进 客户心理要分析</p>
+                        <p>熟悉各类营销方式 发掘多种推广手段</p>
+                    </div>
+                    <div class="ExperiencedBtn" id="ExperiencedBtn"> <a href="https://company.zhaopin.com/CZ590855680.htm" target="_blank" id="excolor">Click Here</a> </div>
+                </div>  
+                <div class="Experienced" id="Exper">
+                    <div class="demandPostPharmacistAvatar">
+                        <div class="wordAvatar"></div>
+                    </div>
+                    <div class="ExperiencedTitle">
+                        <p> 文案策划</p>
+                    </div>
+                    <div class="ExperiencedDetail">
+                        <p>普通、文艺、2B随意切换</p>
+                        <p>专治幻想症、强迫症</p>
+                        <p>天马行空的想象力化腐朽为神奇的文笔</p>
+                    </div>
+                    <div class="copyrightBtn" id="copyrightBtn"> <a href="https://company.zhaopin.com/CZ590855680.htm" target="_blank" id="copycolor">Click Here</a></div>
+                </div> 
+                <div class="Experienced" id="offline">
+                    <div class="demandPostPharmacistAvatar">
+                        <div class="onlineAvatar"></div>
+                    </div>
+                    <div class="ExperiencedTitle">
+                        <p>线下工程师</p>
+                    </div>
+                    <div class="ExperiencedDetail">
+                        <p>可以热幽默 可以冷幽默</p>
+                        <p>细致的观察力 超强的表现力</p>
+                        <p>培训得了知识 对接得了医生</p>
+                    </div>
+                    <div class="copyrightBtn" id="offlineBtn"><a href="https://company.zhaopin.com/CZ590855680.htm" target="_blank" id="offlinecolor">Click Here</a></div>
+                </div> 
+            </div>
+        </div>
+    </div> 
+    <!-- 分割线 -->
+    <div class="kong"></div>
+    <!-- 学习发展 -->
+    <div class="development" id="developmentTitle">
+        <div class="developmentTitle">学习发展</div>
+        <div class="developmentContent" id="developmentContent">
+            <p>公司为员工制定了一套学习发展体系，提供了培训计划、导师指导等项目，以达成团队专业性要求并促进不同职业阶段的员工得以发展。</p>
+            <div class="developmentdetail">
+                <div class="developmentDetailTop">
+                    <div class="developmentDetailTopLeft">
+                        <div class="top-left-top"></div>
+                        <div class="top-left-bottom">实习生培训计划</div>
+                    </div>
+                    <div class="developmentDetailTopcenter">
+                        <div class="top-left-top"></div>
+                        <div class="top-left-bottom">轮岗机制</div>
+                    </div>
+                    <div class="developmentDetailTopright">
+                        <div class="top-left-top"></div>
+                        <div class="top-left-bottom">内外部经验分享会</div>
+                    </div>
+                </div>
+                <div class="developmentdetailBottom">
+                    <div class="developmentDetailBottomLeft">
+                        <div class="bottom-left-top"></div>
+                        <div class="bottom-left-bottom">团队明星辅导 <br> 一对一导师计划</div>
+                    </div>
+                    <div class="developmentDetailBottomcenter">
+                        <div class="bottom-left-top"></div>
+                        <div class="bottom-left-bottom">内部培训外派学习 <br> 外派学习</div>
+                    </div>
+                    <div class="developmentDetailBottomright">
+                        <div class="bottom-left-top"></div>
+                        <div class="bottom-left-bottom" id="arrangementTitle">跨部门项目合作</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 分割线 -->
+    <div class="learingkong"></div>
+    <!-- 灵活工作安排 -->
+    <div class="arrangement">
+        <div class="arrangementTitle">灵活工作安排</div>
+        <div class="arrangementDetail">公司为根据员工实际需求，灵活调整工作安排，帮助员工平衡生活和工作，有效提高工作效率，增加员工幸福感。</div>
+        <div class="arrangementContent">
+            <div class="arrangementContentLeft" id="arrLeft">
+                <div class="arrangementContentLeftPic" id="arrLeftPic"></div>
+                <div class="arrangementContentLeftWord">弹性工作制</div>
+            </div>
+            <div class="arrangementContentcenter" id="arrCenter">
+                <div class="arrangementContentcenterPic" id="arrCenterPic"></div>
+                <div class="arrangementContentLeftWord">补休 | 调休</div>
+            </div>
+            <div class="arrangementContentright" id="arrRight">
+                <div class="arrangementContentrightPic" id="arrRightPic"></div>
+                <div class="arrangementContentLeftWord" id="welfareKong">远程办公 | 在家办公</div>
+            </div>
+        </div>
+    </div>
+    <!-- 分割线 -->
+    <div class="welfareKong"></div>
+    <!-- 薪酬与福利 -->
+    <div class="welfare" id="welfareTitle">
+        <div class="welfareTitle">薪酬与福利</div>
+        <div class="welfareContent"  id="welfareContent">
+            公司关爱员工，满足员工个性化需求，重视薪酬与福利。    
+        </div>            
+        <ul>
+            <li>公司旅游</li>
+            <div class="touristMap">
+                <div class="yunnan"></div>
+                <div class="guilin"></div>
+                <div class="liyang"></div>
+                <div class="qingliang"></div>
+                <div class="chongseng"></div>
+            </div>
+            <li>公司团建</li>
+            <div class="groupBuilding">
+                <div class="groupBuildingFruit">
+                    <div class="groupBuildingFruitPic"></div>
+                    2018双十一
+                </div>
+                <div class="groupBuildingFood">
+                    <div class="groupBuildingFoodPic"></div>
+                    五周年纪念
+                </div>
+                <div class="groupBuildingTeam">
+                    <div class="groupBuildingTeamPic"></div>
+                    儿童节
+                </div>
+                <div class="groupBuildingFestival">
+                    <div class="groupBuildingFestivalPic"></div>
+                    2017双十一
+                </div>     
+            </div>
+            <li>公司活动</li>
+            <div class="activity">
+                <div class="activityFruit">
+                    <div class="activityFruitPic"></div>
+                    周三水果风暴
+                </div>
+                <div class="activityFood">
+                    <div class="activityFoodPic"></div>
+                    美食常年供应
+                </div>
+                <div class="activityTeam">
+                    <div class="activityTeamPic"></div>
+                    团队建设
+                </div>
+                <div class="activityFestival">
+                    <div class="activityFestivalPic"></div>
+                    节日活动
+                </div>  
+            </div>
+            <li>生日特别福利</li>
+            <li>情绪假期</li>
+            <li>岗位专属福利</li>
+            <li>长期服务奖金|长期服务特假</li>
+            <li>合伙人计划</li>
+        </ul>
+    </div>
+    <!-- 底部留言板 -->
+    <div class="foot">
+        <div class="footContent">
+            <div class="footLeft">
+                <p class="companyName">谁与医疗科技（杭州）有限公司</p>
+                <p class="URL">网址:www.shuiyu365.com</p>
+                <p class="phone">电话:0571-86879711</p>
+                <p class="email">邮箱:HRhr@shuiyu365.com</p>
+                <p class="address">地址:杭州市下沙科技园路20号新加坡科技园9幢1101室</p>
+                <div class="twoCode"></div>
+                <p class="attention">扫一扫添加关注</p>
+            </div>
+            <div class="footRight">
+                <div class="messageTitle">-留言后我们会尽快与您联系-</div>
+                <div class="Name">姓名: <input type="text" class="NameInput" id="name" value=""> </div>
+                <div class="messageContent">留言: <textarea  type="text" class="messageContentInput" id="message"></textarea></div>
+                <div class="Email">邮箱: <input type="text" class="EmailInput" id="email" onblur="verification()"> </div>
+                <div class="verification">验证:
+                    <input type="text" id="ctl00_txtcode" onblur="validate()"/>
+                    <input type="button" id="code" />
+                    <span onclick="createCode()" class="change">看不清，换一张</span>
+                </div>
+                <div class="tijiao" id="submit">提交留言</div>
+                <div class="tijiao" id="cancel">取消</div>
+            </div>
+        </div> 
+        <div class="Remarks">
+            <p class="RemarksContent">版权所有：谁与医疗科技（杭州）有限公司  京ICP备：2018-0034号  技术支持：谁与开发部</p>
+        </div> 
+    </div>
+</body>
+<script src="js/serRem.js"></script>
+<script src="js/slide.js"></script>
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="js/recruitment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script>
+    $("#cancel").click(function(){
+        $("#name").val("");
+        $("#message").val("");
+        $("#email").val("");
+        $("#ctl00_txtcode").val("");
+    })
+    $('#submit').click(function(){
+        var name = $("#name").val();
+        var message = $("#message").val();
+        var email = $("#email").val();
+    console.log("你在进行留言操作");
+    $.ajax({
+        url:"http://www.shuiyu365.com/shuiyu/message/insMessage",
+        data: {
+            visitorName:name,
+            visitorMailbox:message,
+            message:email,
+        },
+        success:function(res){
+            alert("留言成功")
+            $("#name").val("");
+            $("#message").val("");
+            $("#email").val("");
+            $("#ctl00_txtcode").val("");
+        },
+        error:function(res){
+            console.log("留言失败");
+        } 
+    });
+})
+</script>
+</html>

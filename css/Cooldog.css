@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+    font-size: 0;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+.Cooldog_container {
+    width: 10rem;
+    height:6.33rem;
+    margin: 0 auto 0;
+    position: relative;
+    overflow: hidden;
+    animation: cu 2s forwards;
+}
+@keyframes cu{
+	from{
+		opacity: 0;
+	}to{
+		opacity: 1;
+	}
+}
+
+ .Cooldog_content {
+    position: absolute;
+    width: 7.47rem;
+    height: 4.33rem;
+    top: 0.6rem;
+    left: 33.5%;
+    margin-left: -2.2rem;
+}
+.Cooldog_container .Cooldog_content li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7.47rem;
+    height: 4.33rem;
+    transition: all 0.3s ease;
+    background-color: red;
+}
+
+.Cooldog_container .Cooldog_content li img {
+    width: 100%;
+    height: 100%;
+    /* vertical-align: middle; */
+    /* display: inline-block; */
+    /* background-color: red; */
+}
+
+.Cooldog_container .btn_left, .Cooldog_container .btn_right {
+    /* display: none; */
+    width: 1.26rem;
+    height: 1.79rem;
+    position: absolute;
+    top: 1.65rem;
+    z-index: 50;
+    color: #fff;
+    line-height: 1.79rem;
+
+}
+
+.Cooldog_container .btn_left {
+    text-align: left;
+    left: 0;
+}
+
+.Cooldog_container .btn_right {
+    text-align: right;
+    right: 0;
+}
+
+.Cooldog_container i {
+    font-size: 0.5rem;
+}
+
+.Cooldog_container .btn_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0.2rem;
+    height: 0.2rem;
+    display: none;
+    line-height: 0.2rem;
+    text-align: center;
+    background-color: #BCB9B9;
+    color: #fff;
+}
+
+.Cooldog_container .btn_close i {
+    font-size: 0.18rem;
+}
+
+.Cooldog_container .buttons {
+    width: 3.7rem;
+    height: 0.05rem;
+    line-height: 0.05rem;
+    position: absolute;
+    bottom: 1.8rem;
+    left: 57%;
+    margin-left: -1.85rem;
+    z-index: 80;
+}
+
+.Cooldog_container .buttons a {
+    float: left;
+    width: 0.24rem;
+    height: 0.08rem;
+    background-color: #ffffff;
+    margin-right: 0.09rem;
+}
+
+.Cooldog_container .buttons a.color {
+    background-color: #18adae;
+}
+
+.Cooldog_container .buttons a:last-child {
+    margin-right: 0;
+}
+
+.p1 {
+    transform: translate3d(-5.77rem, 0, 0) scale(0.81);
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.p2 {
+    transform: translate3d(-3.25, 0, 0) scale(0.81);
+    transform-origin: 1 70%;
+    opacity: 0.6;
+    z-index: 2;
+}
+
+.p3 {
+    transform: translate3d(-2rem, 0, 0) scale(0.81);
+    transform-origin: 1 70%;
+    opacity: 0.8;
+    z-index: 3;
+}
+
+.p4 {
+    transform: translate3d(0rem, 0, 0) scale(1);
+    opacity: 1;
+    z-index: 4;
+}
+
+.p5 {
+    transform: translate3d(2.2rem, 0, 0) scale(0.81);
+    transform-origin:1  70%;
+    opacity: 0.8;
+    z-index: 3;
+}
+
+.p6 {
+    transform: translate3d(4.25rem, 0, 0) scale(0.81);
+    transform-origin: 1 70%;
+    opacity: 0.6;
+    z-index: 2;
+}
+
+.p7 {
+    transform: translate3d(6.25rem, 0, 0) scale(0.81);
+    transform-origin: 1 70%;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+
+
+
+

@@ -1,0 +1,1148 @@
+*{
+    margin: 0rem;
+    padding: 0rem;
+	font-family: Sample;
+}
+html{
+	font-size: 100px;
+}
+a{
+	text-decoration: none;
+}
+.top{
+	width: 100%;
+	margin: 0 auto;
+	position: fixed;
+	z-index: 999;
+	left: 0;	
+	right: 0;
+	top: 0;
+    background-color: white;
+}
+.topcontentleft{
+	height: 0.87rem;
+	width: 2rem;
+	float: left;
+	margin-top: 0.1rem;
+}
+.topContent{
+	width: 12rem;
+	height:0.9rem;
+	margin: 0 auto;
+}
+.logo{
+	width: 0.92rem;
+	height: 0.54rem;
+	margin-left: 0.33rem;
+	background: url(http://icon.shuiyu365.com/logo.png)no-repeat;
+	background-size: 100% 100%;
+}
+.logoWord{
+	margin-left: 0.30rem;
+	height: 0.16rem;
+	font-size: 0.16rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0.004rem;
+	color: #9f7f59;
+}
+.logoEnword{
+	height: 0.06rem;
+	font-size: 0.08rem;
+	font-weight: normal;
+	font-stretch: normal;
+	color: #9f7f59;
+	margin-left: 0.30rem;
+	margin-top: 0.05rem;
+}
+.topcontentright{
+	width: 10rem;
+	height: 1rem;
+	float: right;
+	margin-top: 0.1rem;
+	position: relative;
+}
+#change{
+	width: 1.1rem;
+	height: 0.22rem;
+	color: #4e4e4e;
+    margin-top:0.2rem;
+    font-size: 0.14rem;
+	cursor: pointer;
+	position: absolute;
+	right: 0.2rem;
+}
+.nav {
+	float: right;
+	font-size: 0.14rem;
+	color: #7d7d7d;
+	margin-top:0.4rem;
+	position: absolute;
+	right: 0;
+}
+.nav div{
+	float: left;
+	cursor: pointer;
+	margin-top: 0.2rem;
+}
+.home{
+	width: 0.75rem;
+	height: 0.3rem;
+	position: relative;
+	color: #333333;
+	text-align: center;
+}
+.homea{
+	width: 0.4rem;
+	height: 0.3rem;		
+	position: relative;
+	color: #333333;
+	text-align: center;
+	padding-bottom: 0.21rem;
+}
+.homea:after {
+	content: "";
+	width: 0;
+	height: 0.02rem;
+	background: #1c9f9f;
+	position: absolute;
+	bottom: 0%;
+	left: 50%;
+	transition: all .8s;
+}
+.homea:hover:after {
+	left: 0%;
+	width: 100%;
+}
+.aboutUs,.productDescription,.careerDevelopment{
+	width: 1rem;
+	height: 0.3rem;
+	position: relative;
+	color: #333333;
+	text-align: center;
+}
+.abouta{
+	height: 0.3rem;
+	position: relative;
+	color: #333333;
+	text-align: center;
+	padding-bottom: 0.21rem;
+}
+.abouta:after {
+	content: "";
+	width: 0;
+	height: 0.02rem;
+	background: #1c9f9f;
+	position: absolute;
+	bottom: 0%;
+	left: 50%;
+	transition: all .8s;
+}
+.abouta:hover:after {
+	left: 0%;
+	width: 100%;
+}
+.producta{
+	height: 0.3rem;
+	position: relative;
+	color: #333333;
+	text-align: center;
+	padding-bottom: 0.21rem;
+}
+.producta:after {
+	content: "";
+	width: 0;
+	height: 0.02rem;
+	background: #1c9f9f;
+	position: absolute;
+	bottom: 0%;
+	left: 50%;
+	transition: all .8s;
+}
+.producta:hover:after {
+	left: 0%;
+	width: 100%;
+}
+.recursiona{
+	height: 0.3rem;
+	position: relative;
+	color: #333333;
+	text-align: center;
+	padding-bottom: 0.19rem;
+	border-bottom: 0.02rem solid #1c9f9f;
+}
+.nav div a{
+	color: #7d7d7d;
+}
+.slide{
+    width: 2rem;
+    height: 2.36rem;
+    margin-left: 87%;
+    margin-top: 8%;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: 999;
+}
+.jobDemand{
+    margin-top: 0.37rem;
+    font-size: 0.2rem;
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 0.2rem;
+}
+.jobs,.Salary,.Learning{
+    margin-top: 0.29rem;
+    font-size: 0.18rem;
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 0.2rem;
+}
+.focus{
+    width: 0.21rem;
+    height: 0.21rem;
+    border-radius: 50%;
+    border: 0.01rem solid #ffffff;
+    float: right;
+    margin-right: 0.2rem;
+    margin-top: -0.23rem;
+}
+.sliderWordborder{
+    width: 0.08rem;
+    height: 0.08rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-top: -0.15rem;
+    float: right;
+    margin-right: 0.27rem;
+}
+#LearningFous{
+    display: none;
+}
+#jobsFous{
+    display: none;
+}
+#SalaryFous{
+    display: none;
+}
+.carouselMap{
+	height: 6.48rem;
+    margin-top: 1.1rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/bannerBg.jpg)no-repeat;
+    background-size: 100% 100%;
+    /* margin: 0 auto; */
+}
+.carouselWord{
+    width: 12rem;
+    margin: 0 auto;
+    height: 3.6rem;
+    padding-top: 1.44rem;
+}
+.carouselTitle{
+	font-size: 0.5rem;
+	color: #ffffff;
+}
+.xian{
+    width: 1.15rem;
+	height: 0.03rem;
+	background-color: #1dc2d4;
+    opacity: 0.74;
+    margin-top: 0.16rem;
+}
+.carouselDetail{
+    height: 0.78rem;
+    font-size: 0.18rem;
+    color: #ffffff;
+    margin-top: 0.6rem;
+}
+.contactUS{
+    width: 1.72rem;
+	height: 0.43rem;
+	border: solid 0.01rem #ffffff;
+    margin-top: 0.9rem;
+	font-size: 0.2rem;
+    text-align: center;
+    line-height: 0.43rem;
+}
+.contactUS a{
+    color: #ffffff;
+    cursor: pointer;
+}
+.container{
+    width: 12rem;
+    margin: 0 auto;
+}
+.preface{
+    margin-top: 0.47rem;
+}
+.preface{
+    font-size: 0.16rem;
+    line-height: 0.3rem;;
+    color: #383838;
+}
+.demandPost{
+    margin-top: 0.35rem;
+    opacity: 0;
+	font-size: 0.34rem;
+	color: #000000;
+}
+.demandPostDetail{
+	font-size: 0.16rem;
+	color: #383838;
+    opacity: 0.7;
+    padding-top: 0.38rem;
+    text-align: center;
+}
+@keyframes opcit{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.demandPostTitle{
+    margin-top: 0.24rem;
+    font-size: 0.34rem;
+    text-align: center;
+    
+}
+.demandPostArrow{
+    width: 0.18rem;
+    height: 0.11rem;
+    background-color: red;
+    margin-left: 96%;
+    margin-top: -0.2rem;
+}
+.demandPostcontent{
+    width: 12rem;
+    margin: 0 auto;
+    margin-top: 0.52rem;
+}
+.demandPostPharmacist{
+    width: 2.8rem;
+    height: 4.7rem;
+    background-color: #f6f6f6;
+    float: left;
+}
+.demandPostPharmacist:hover{
+    -webkit-box-shadow:0 0.03rem 0.09rem rgba(0,0,0,.3);
+	-moz-box-shadow:0 0.03rem 0.09rem rgba(0,0,0,.3);
+	-o-box-shadow:0 0.03rem 0.09rem rgba(0,0,0,.3);
+	box-shadow:0 0.03rem 0.09rem rgba(0,0,0,.3);
+	position: relative;
+	z-index: 5;
+}
+.demandPostPharmacistAvatar{
+    width: 100%;
+    height: 2.04rem;
+    background-color: #ececec;
+	box-shadow: inset 0rem 0rem 0.3rem 0rem 
+        rgba(0, 0, 0, 0.05);
+    text-align: center;    
+}
+.Avatar{
+    margin: 0.45rem 0.78rem;
+    position: absolute;
+    width: 1.11rem;
+    height: 1.1rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/Posts1.png)no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+}
+.ExperienAvatar{
+    margin: 0.45rem 0.78rem;
+    position: absolute;
+    width: 1.11rem;
+    height: 1.1rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/Posts2.png)no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+}
+.wordAvatar{
+    margin: 0.45rem 0.78rem;
+    position: absolute;
+    width: 1.11rem;
+    height: 1.1rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/Posts3.png)no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+}
+.onlineAvatar{
+    margin: 0.45rem 0.78rem;
+    position: absolute;
+    width: 1.11rem;
+    height: 1.1rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/Posts4.png)no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+}
+.demandPostPharmacistTitle{
+    margin-top: 0.22rem;
+    font-size: 0.18rem;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+}
+.demandPostPharmacistcenter{
+	font-size: 0.14rem;
+	line-height: 0.4rem;
+	color: #383838;
+    opacity: 0.7;
+    text-align: center;
+}
+.demandPostPharmacistDetail{
+    width: 2.4rem;
+    margin: 0.2rem 0.4rem;
+	font-size: 0.14rem;
+	color: #383838;
+    opacity: 0.7;
+}
+.demandPostPharmacistBtn{
+    width: 1.24rem;
+    height: 0.36rem;
+    background-color: #f6f6f6;
+    border: solid 0.01rem #666666;
+    text-align: center;
+    line-height: 0.35rem;
+    font-size: 0.14rem;
+    margin: -0.1rem auto; 
+}
+#fontcolor{
+    color: #666666;
+    cursor: pointer;
+}
+#excolor{
+    color: #666666;
+    cursor: pointer;
+}
+#copycolor{
+    color: #666666;
+    cursor: pointer;
+}
+#offlinecolor{
+    color: #666666;
+    cursor: pointer;
+}
+.Experienced{
+    width: 2.8rem;
+    height: 4.7rem;
+    background-color: #f6f6f6;
+    float: left;
+    margin-left: 0.26rem;
+}
+.Experienced:hover{
+    -webkit-box-shadow:0 0.03rem 0.09rem rgba(0,0,0,.3);
+	-moz-box-shadow:0 0.03rem 0.09rem rgba(0,0,0,.3);
+	-o-box-shadow:0 0.03rem 0.09rem rgba(0,0,0,.3);
+	box-shadow:0 0.03rem 0.09rem rgba(0,0,0,.3);
+	position: relative;
+	z-index: 5;
+}
+.ExperiencedTitle{
+    margin-top: 0.37rem;
+    font-size: 0.18rem;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+}
+.ExperiencedDetail{
+    width: 2.4rem;
+    margin: 0.2rem 0.4rem;
+	font-size: 0.14rem;
+	color: #383838;
+    opacity: 0.7;
+}
+.ExperiencedBtn{
+    width: 1.24rem;
+    height: 0.36rem;
+    border: solid 0.01rem #666666;
+    text-align: center;
+    line-height: 0.35rem;
+    font-size: 0.14rem;
+    margin: 0.2rem auto; 
+}
+.ExperiencedBtn a{
+    color: #666666;
+    cursor: pointer;
+}
+.copyrightBtn{
+    width: 1.24rem;
+    height: 0.36rem;
+    border: solid 0.01rem #666666;
+    text-align: center;
+    line-height: 0.35rem;
+    font-size: 0.14rem;
+    margin: 0.2rem auto; 
+}
+.copyrightBtn a{
+    color: #666666;
+    cursor: pointer;
+}
+.offlineBtn{
+    width: 1.24rem;
+    height: 0.36rem;
+    border: solid 0.01rem #666666;
+    text-align: center;
+    line-height: 0.35rem;
+    font-size: 0.14rem;
+    margin: 0.2rem auto; 
+}
+.offlineBtn a{
+    color: #666666;
+    cursor: pointer;
+}
+.kong{
+    width: 100%;
+    height: 0.15rem;
+    background-color: #f6f6f6;
+    margin-top: 5.91rem;
+}
+
+
+
+.demandPostOperation{
+    width: 3.63rem;
+    height: 3.58rem;
+	box-shadow: 0rem 0.04rem 0.11rem 0.01rem 
+        rgba(0, 0, 0, 0.11);
+    border-top: 0.03rem solid #3fa0d7;
+    margin-left: 0.27rem;
+    float: left;
+}
+.demandPostOperationAvatar{
+    width: 0.86rem;
+    height: 0.86rem;
+    margin: 0 auto;
+    background-color: pink;
+    margin-top: 0.7rem;
+}
+.demandPostOperationName{
+    margin-top: 0.34rem;
+    font-size: 0.18rem;
+    color: #000000;
+    text-align: center;
+}
+.demandPostOperationDetail{
+    margin-top: 0.13rem;
+    /* font-family: SourceHanSansCN-Light; */
+
+}
+.demandPostOperation p{
+    text-align: center;
+    font-size: 0.16rem;
+    color: #383838;
+}
+.demandPostOperationBtn{
+    width: 1.24rem;
+    height: 0.36rem;
+    background-color: #1c9f9f;
+    text-align: center;
+    line-height: 0.35rem;
+    color: #ffffff;
+    font-size: 0.14rem;
+    margin: 0.27rem auto; 
+}
+.demandPostCopywriting{
+    width: 3.63rem;
+    height: 3.58rem;
+    /* background-color: #f8f8f8; */
+	box-shadow: 0rem 0.04rem 0.11rem 0.01rem 
+        rgba(0, 0, 0, 0.11);
+    border-top: 0.03rem solid #3fa0d7;
+    margin-left: 7.8rem;
+}
+.demandPostCopywritingAvatar{
+    width: 0.86rem;
+    height: 0.86rem;
+    margin: 0 auto;
+    background-color: pink;
+    margin-top: 0.7rem;
+}
+.demandPostCopywritingName{
+    margin-top: 0.34rem;
+    font-size: 0.18rem;
+    color: #000000;
+    text-align: center;
+}
+.demandPostCopywritingDetail{
+    margin-top: 0.13rem;
+}
+.demandPostCopywriting p{
+    text-align: center;
+    font-size: 0.16rem;
+    color: #383838;
+}
+.demandPostCopywritingBtn{
+    width: 1.24rem;
+    height: 0.36rem;
+    background-color: #1c9f9f;
+    text-align: center;
+    line-height: 0.35rem;
+    color: #ffffff;
+    font-size: 0.14rem;
+    margin: 0.27rem auto; 
+}
+.demandPostEngineer{
+    width: 3.63rem;
+    height: 3.58rem;
+    /* background-color: #f8f8f8; */
+	box-shadow: 0rem 0.04rem 0.11rem 0.01rem 
+        rgba(0, 0, 0, 0.11);
+    border-top: 0.03rem solid #3fa0d7;
+    float: left;
+    margin-top: 0.48rem;
+}
+.demandPostEngineerAvatar{
+    width: 0.86rem;
+    height: 0.86rem;
+    margin: 0 auto;
+    background-color: pink;
+    margin-top: 0.7rem;
+}
+.demandPostEngineerName{
+    margin-top: 0.34rem;
+    font-size: 0.18rem;
+    color: #000000;
+    text-align: center;
+}
+.demandPostEngineerDetail{
+    margin-top: 0.13rem;
+}
+.demandPostEngineer p{
+    text-align: center;
+    font-size: 0.16rem;
+    color: #383838;
+}
+.demandPostEngineerBtn{
+    width: 1.24rem;
+    height: 0.36rem;
+    background-color: #1c9f9f;
+    text-align: center;
+    line-height: 0.35rem;
+    color: #ffffff;
+    font-size: 0.14rem;
+    margin: 0.27rem auto; 
+}
+.development{
+    margin-top: 0.7rem;
+    opacity: 0;
+}
+.developmentTitle{
+    margin-top: 0.24rem;
+    font-size: 0.34rem;
+    text-align: center;
+
+}
+
+.developmentContent{
+    width: 11.5rem;
+    margin: 0 auto;
+    margin-top: 0.38rem;
+    text-align: center;
+}
+.development p{
+    font-size: 0.15rem;
+    color: #383838;
+}
+.developmentdetail{
+    width: 9.53rem;
+    height: 3.81rem;
+    margin: 0 auto;
+    margin-top: 0.98rem;
+}
+.developmentDetailTop{
+    width: 100%;
+    height: 1.905rem;
+    /* background-color: red; */
+    border-bottom: 0.01rem solid #ededed;
+    /* background-color: #ededed; */
+}
+.developmentDetailTopLeft{
+    height: 100%;
+    width: 3.16rem;
+    border-right: 0.01rem solid #ededed;
+    float: left;
+    font-size: 0.16rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/trainPlay.png)no-repeat center;
+    /* background-size: 50% 20%; */
+    background-position: top;
+
+}
+.top-left-top{
+    width: 100%;
+    height: 1.04rem; 
+    margin: 0 auto;
+}
+.top-left-bottom{
+	color: #000000;
+	opacity: 0.8;
+}
+.developmentDetailTopLeft:hover{
+    background-size: 28% 40%;
+    font-size: 0.18rem;
+}
+.developmentDetailTopcenter{
+    height: 100%;
+    width: 3.16rem;
+    border-right: 0.01rem solid #ededed;
+    float: left;
+    font-size: 0.16rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/rotation.png)no-repeat;
+    background-position: top;
+}
+.developmentDetailTopcenter:hover{
+    background-size: 28% 40%;
+    font-size: 0.18rem;
+}
+.developmentDetailTopright{
+    height: 100%;
+    width: 3.16rem;
+    float: left;
+    font-size: 0.16rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/internal.png)no-repeat;
+    background-position: top;
+}
+.developmentDetailTopright:hover{
+    background-size: 28% 40%;
+    font-size: 0.18rem;
+}
+.developmentdetailBottom{
+    width: 100%;
+    height: 1.905rem;
+}
+.developmentDetailBottomLeft{
+    height: 100%;
+    width: 3.16rem;
+    border-right: 0.01rem solid #ededed;
+    float: left;
+    font-size: 0.16rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/ontTwoOne.png)no-repeat;
+    background-position: center;
+}
+.developmentDetailBottomLeft:hover{
+    background-size: 28% 40%;
+    font-size: 0.18rem;
+}
+.developmentDetailBottomcenter{
+    height: 100%;
+    width: 3.16rem;
+    border-right: 0.01rem solid #ededed;
+    float: left;
+    font-size: 0.16rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/training.png)no-repeat;
+    background-position: center;
+}
+.developmentDetailBottomcenter:hover{
+    background-size: 28% 45%;
+    font-size: 0.18rem;
+}
+.developmentDetailBottomright{
+    height: 100%;
+    width: 3.16rem;
+    float: left;
+    font-size: 0.16rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/department.png)no-repeat;
+    background-position: center;
+}
+.developmentDetailBottomright:hover{
+    background-size: 28% 45%;
+    font-size: 0.18rem;
+}
+.bottom-left-top{
+    width: 100%;
+    height: 1.04rem;
+    margin: 0 auto;
+    font-size: 0.16rem;
+    /* background-color: red; */
+}
+.bottom-left-top img{
+    margin-top: 0.3rem;
+}
+.bottom-left-bottom{
+	color: #000000;
+    opacity: 0.8;
+    margin-top: 0.6rem;
+}
+.learingkong{
+    width: 100%;
+    height: 0.15rem;
+    background-color: #f6f6f6;
+    margin-top: 1.29rem;
+}
+.arrangement{
+    height: 7.73rem;
+    border-top: 0.01rem solid #d2d2d2;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/WorkingBg.png)no-repeat;
+    background-size: 100% 100%;
+}
+.arrangementTitle{
+    font-size: 0.34rem;
+    padding-top: 0.89rem;
+    color: #ffffff;
+    text-align: center;
+}
+.arrangementDetail{
+    font-size: 0.16rem;
+    text-align: center;
+	color: #ffffff;
+    opacity: 0.7;
+    padding-top: 0.34rem;
+}
+.arrangementContent{
+    width: 10.7rem;
+    height: 4.14rem;
+    /* background-color: pink; */
+    margin: 0.88rem auto;
+}
+.arrangementContentLeft{
+    width: 2.7rem;
+    height: 100%;
+    background-color: white;
+    float: left;
+    font-size: 0.18rem;  
+}
+.arrangementContentLeftPic{
+    width: 2.39rem;
+    height: 2.13rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/work1.png)no-repeat;
+    background-size: 100% 100%;
+    margin: 0.48rem auto;
+    border-radius: 50%;
+}
+.arrangementContentcenterPic{
+    width: 2.39rem;
+    height: 2.13rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/work2.png)no-repeat;
+    background-size: 100% 100%;
+    margin: 0.48rem auto;
+    border-radius: 50%;
+}
+.arrangementContentrightPic{
+    width: 2.39rem;
+    height: 2.13rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/work3.png)no-repeat;
+    background-size: 100% 100%;
+    margin: 0.48rem auto;
+    border-radius: 50%;
+}
+.arrangementContentLeftWord{
+    color: #000000;
+    padding-top: 0.25rem;
+    text-align: center;
+}
+.arrangementContentcenter{
+    width: 2.7rem;
+    height: 100%;
+    background-color: white;
+    float: left;
+    margin-left: 1.3rem;
+    font-size: 0.18rem;
+}
+.arrangementContentright{
+    width: 2.7rem;
+    height: 100%;
+    background-color: white;
+    float: left;
+    margin-left: 1.3rem;
+    font-size: 0.18rem;
+}
+.welfareKong{
+    width: 100%;
+    height: 0.15rem;
+    background-color: #f6f6f6;
+}
+.welfare{
+    width: 12rem;
+    margin: 0 auto; 
+    margin-top: 0.21rem;
+    opacity: 0;
+}
+.welfareTitle{
+	font-size: 0.34rem;
+    color: #000000;
+    margin-top: 0.32rem;
+    text-align: center;
+}
+.welfareContent{
+	font-size: 0.16rem;
+	color: #000000;
+    opacity: 0.7;
+    text-align: center;
+    padding-top: 0.29rem;
+}
+
+.welfare ul{
+    font-size: 0.16rem;
+    margin-left: 0.2rem;
+    margin-top: 0.21rem;
+    color: #383838;
+}
+.welfare ul li{
+    line-height: 0.3rem;
+    margin-top: 0.17rem;
+}
+.touristMap{
+    height: 4.46rem;
+    margin: 0 auto;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/map.jpg)no-repeat;
+    background-size: 100% 100%;
+    margin-top: 0.24rem;
+}
+.yunnan{
+    width: 0.64rem;
+    height: 0.5rem;
+    position: absolute;
+    margin-top: 2.5rem;
+    margin-left: 2.1rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/yunnansmall.png)no-repeat;
+    background-size: 100% 100%;
+}
+.yunnan:hover{
+    width: 2.17rem;
+    height: 1.67rem;
+    position: absolute;
+    margin-top: 1.3rem;
+    margin-left: 1.35rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/yunnanbig.png)no-repeat;
+    background-size: 100% 100%;
+}
+.guilin{
+    width: 0.64rem;
+    height: 0.5rem;
+    position: absolute;
+    margin-top: 2.2rem;
+    margin-left: 3.6rem;
+    background: url(http://icon.shuiyu365.com/guilinsmall.png)no-repeat;
+    background-size: 100% 100%;
+}
+.guilin:hover{
+    width: 2.17rem;
+    height: 1.67rem;
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: 2.85rem;
+    background: url(http://icon.shuiyu365.com/guilinbig.png)no-repeat;
+    background-size: 100% 100%;
+}
+.liyang{
+    width: 0.64rem;
+    height: 0.5rem;
+    position: absolute;
+    margin-top: 1.6rem;
+    margin-left: 5.8rem;
+    background: url(http://icon.shuiyu365.com/liyangsmall.png)no-repeat;
+    background-size: 100% 100%;
+}
+.liyang:hover{
+    width: 2.17rem;
+    height: 1.67rem;
+    position: absolute;
+    margin-top: 0.4rem;
+    margin-left: 5.05rem;
+    background: url(http://icon.shuiyu365.com/liyangbig.png)no-repeat;
+    background-size: 100% 100%;
+}
+.qingliang{
+    width: 0.64rem;
+    height: 0.5rem;
+    position: absolute;
+    margin-top: 2.85rem;
+    margin-left: 5.6rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/qingliangsmall.png)no-repeat;
+    background-size: 100% 100%;
+}
+.qingliang:hover{
+    width: 2.17rem;
+    height: 1.67rem;
+    position: absolute;
+    margin-top: 2.85rem;
+    margin-left: 4.8rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/qingliangbig.png)no-repeat;
+    background-size: 100% 100%;
+}
+.chongseng{
+    width: 0.64rem;
+    height: 0.5rem;
+    position: absolute;
+    margin-top: 2.2rem;
+    margin-left: 7.7rem;
+    background: url(http://icon.shuiyu365.com/chongsengsmall.png)no-repeat;
+    background-size: 100% 100%;
+}
+.chongseng:hover{
+    width: 2.17rem;
+    height: 1.67rem;
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: 6.9rem;
+    background: url(http://icon.shuiyu365.com/chongsenbig.png)no-repeat;
+    background-size: 100% 100%;
+}
+.groupBuilding{
+    height: 2.69rem;
+    margin: 0.24rem auto;
+}
+.groupBuildingFruit{
+    width:2.64rem;
+    height: 2.69rem;
+    /* box-sizing: border-box; */
+    border: solid 0.01rem #f3f3f4;
+    float: left;
+    font-size: 0.18rem;
+    color: #383838;
+    line-height: 0.6rem;
+    text-align: center;
+}
+.groupBuildingFruitPic{
+    width: 2.64rem;
+    height: 2.09rem;
+    /* background-color: red; */
+    background: url(http://icon.shuiyu365.com/img/JoinUs/2018.11.11.jpg)no-repeat center;
+    background-size: 100% 100%;
+}
+.groupBuildingFruitPic:hover{
+    background-size: 110% 110%;
+}
+.groupBuildingFood{
+    width:2.64rem;
+    height: 2.69rem;
+    float: left;
+    margin-left: 0.25rem;
+    font-size: 0.18rem;
+    color: #383838;
+    line-height: 0.6rem;
+    text-align: center;
+    border: solid 0.01rem #f3f3f4;
+}
+.groupBuildingFoodPic{
+    width: 2.64rem;
+    height: 2.09rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/5TH.jpg)no-repeat center;
+    background-size: 100% 100%;
+    /* background-color: red; */
+}
+.groupBuildingFoodPic:hover{
+    background-size: 110% 110%;
+}
+.groupBuildingTeam{
+    width:2.64rem;
+    height: 2.69rem;
+    float: left;
+    margin-left: 0.25rem;
+    font-size: 0.18rem;
+    color: #383838;
+    line-height: 0.6rem;
+    text-align: center;
+    border: solid 0.01rem #f3f3f4;
+}
+.groupBuildingTeamPic{
+    width: 2.64rem;
+    height: 2.09rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/children.jpg)no-repeat center;
+    background-size: 100% 100%;
+}
+.groupBuildingTeamPic:hover{
+    background-size: 110% 110%;
+}
+.groupBuildingFestival{
+    width:2.64rem;
+    height: 2.69rem;
+    margin-left: 8.66rem;
+    font-size: 0.18rem;
+    color: #383838;
+    line-height: 0.6rem;
+    text-align: center;
+    border: solid 0.01rem #f3f3f4;
+}
+.groupBuildingFestivalPic{
+    width: 2.64rem;
+    height: 2.09rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/2017.11.jpg)no-repeat center;
+    background-size: 100% 100%;
+}
+.groupBuildingFestivalPic:hover{
+    background-size: 110% 110%;
+}
+.activity{
+    height: 2.69rem;
+    margin: 0 auto;
+}
+.activityFruit{
+    width:2.64rem;
+    height: 2.69rem;
+    /* box-sizing: border-box; */
+    border: solid 0.01rem #f3f3f4;
+    float: left;
+    font-size: 0.18rem;
+    color: #383838;
+    line-height: 0.6rem;
+    text-align: center;
+}
+.activityFruitPic{
+    width: 2.64rem;
+    height: 2.09rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/fruit.jpg)no-repeat center;
+    background-size: 100% 100%;
+}
+.activityFruitPic:hover{
+    background-size: 110% 110%;
+}
+.activityFood{
+    width:2.64rem;
+    height: 2.69rem;
+    float: left;
+    margin-left: 0.25rem;
+    font-size: 0.18rem;
+    color: #383838;
+    line-height: 0.6rem;
+    text-align: center;
+    border: solid 0.01rem #f3f3f4;
+}
+.activityFoodPic{
+    width: 2.64rem;
+    height: 2.09rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/delicioud.jpg)no-repeat center;
+    background-size: 100% 100%;
+}
+.activityFoodPic:hover{
+    background-size: 110% 110%;
+}
+.activityTeam{
+    width:2.64rem;
+    height: 2.69rem;
+    float: left;
+    margin-left: 0.25rem;
+    font-size: 0.18rem;
+    color: #383838;
+    line-height: 0.6rem;
+    text-align: center;
+    border: solid 0.01rem #f3f3f4;
+}
+.activityTeamPic{
+    width: 2.64rem;
+    height: 2.09rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/teambuil.jpg)no-repeat center;
+    background-size: 100% 100%;
+}
+.activityTeamPic:hover{
+    background-size: 110% 110%;
+}
+.activityFestival{
+    width:2.64rem;
+    height: 2.69rem;
+    margin-left: 8.66rem;
+    font-size: 0.18rem;
+    color: #383838;
+    line-height: 0.6rem;
+    text-align: center;
+    border: solid 0.01rem #f3f3f4;
+}
+.activityFestivalPic{
+    width: 2.64rem;
+    height: 2.09rem;
+    background: url(http://icon.shuiyu365.com/img/JoinUs/festival.jpg)no-repeat center;
+    background-size: 100% 100%;
+}
+.activityFestivalPic:hover{
+    background-size: 110% 110%;
+}

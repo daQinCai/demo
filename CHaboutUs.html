@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.location.href = /Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent) ? "#" :  "#";
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="http://icon.shuiyu365.com/bitbug_favicon.ico" />
+    <title>谁与医疗科技（杭州）有限公司-关于我们</title>
+    <link rel="stylesheet" href="css/CHaboutUs.css" type="text/css" >
+    <link rel="stylesheet" href="css/footer.css"  >
+    <link rel="stylesheet" href="css/Cooldog.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <script>
+        //产生验证码 
+        window.onload = function() {
+            createCode()
+        }
+        var code; //在全局定义验证码 
+        function createCode() {
+            code = "";
+            var codeLength = 4; //验证码的长度 
+            var checkCode = document.getElementById("code");
+            var random = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+              'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); //随机数 
+            for(var i = 0; i < codeLength; i++) { //循环操作 
+            var index = Math.floor(Math.random() * 36); //取得随机数的索引（0~35） 
+                code += random[index]; //根据索引取得随机数加到code上 
+            }
+            checkCode.value = code; //把code值赋给验证码 
+        }
+        //校验验证码 
+        function validate() {
+            var inputCode = document.getElementById("ctl00_txtcode").value.toUpperCase(); //获取输入框内验证码并转化为大写  
+            if(inputCode.length <= 0) { //若输入的验证码长度为0 
+                alert("请输入验证码！"); //则弹出请输入验证码 
+            } 
+            else if(inputCode != code) { //若输入的验证码与产生的验证码不一致时 
+                alert("验证码输入错误!"); //则弹出验证码输入错误 
+                createCode(); //刷新验证码 
+                document.getElementById("ctl00_txtcode").value = "";//清空文本框 
+            } else { 
+                console.log("输入成功");
+            }
+        }
+        // 验证邮箱
+        function verification(){
+            var temp = document.getElementById("email");                 //对电子邮件的验证   
+            var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;                
+            if (!myreg.test(temp.value)) {                    
+                // $("#intererrmsg").show();                    
+                // $("#intermsg").html("请输入正确的用户名！");      
+                alert("请输入正确的用户名")              
+                    return false;                
+            }
+        }
+    </script>
+</head>
+<script type="text/javascript"></script>
+<body>
+    <!-- 导航栏 -->
+    <div class="top" id="topnav">
+        <div class="topContent">
+            <div class="topcontentleft">
+                <a href="CHindex.html"><div class="logo"></div></a> 
+                <p class="logoWord" id="logoword">让生命更健康</p>
+                <p class="logoEnword" id="logoEnword">MAKE LIFE HEALTHIER</p>
+            </div>
+            <div class="topcontentright">
+                <div id="change"><a href="aboutUs.html"><img src="http://icon.shuiyu365.com/switch.png" alt=""></a></div>
+                <div class="nav" id="nav">
+                    <div class="home"><a href="CHindex.html" class="homea" id="home">首页</a></div>
+                    <div class="Separate">|</div>
+                    <div class="aboutUs"><a href="CHaboutUs.html" class="abouta" id="abouts">关于我们</a></div>
+                    <div class="Separate">|</div>
+                    <div class="productDescription"><a href="CHproduct.html" class="producta" id="product">产品介绍</a></div>                    
+                    <div class="Separate">|</div>
+                    <div class="careerDevelopment"><a href="CHrecruitment.html" class="recursiona" id="recursiona">职业发展</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="carouselMap"></div>
+    <!-- 选项卡 -->
+    <div class="tab" id="tab">
+        <!-- 选项卡标题 -->
+        <div class="tabTitle" id="tabTitle">
+            <!-- 公司简介 -->
+            <div class="companyProfile" id="companyProfile">
+                <div class="tabTitleImagefocus" id="tabTitleImagefocus"></div>
+                <div class="tabTitleImage" id="tabTitleImage"></div>
+                <div class="tabTitleWord">公司简介</div>
+            </div>
+            <!-- 愿景与使命 -->
+            <div class="mission" id="mission">
+                <div class="missionImgfocus" id="missionImgfocus"></div>
+                <div class="missionImage" id="missionImage"></div>
+                <div class="tabTitleWord">愿景与使命</div>
+            </div>
+            <!-- 核心价值观 -->
+            <div class="Value" id="Value">
+                <div class="ValueImgfocus" id="ValueImgfocus"></div>
+                <div class="ValueImg" id="ValueImg"></div>
+                <div class="tabTitleWord">核心价值观</div>
+            </div>
+            <!-- 生态圈文化 -->
+            <div class="culture" id="culture">
+                <div class="cultureImgfocus" id="cultureImgfocus"></div>
+                <div class="cultureImg" id="cultureImg"></div>
+                <div class="tabTitleWord">生态圈文化</div>
+            </div>
+            <!-- 企业环境 -->
+            <div class="surroundings" id="surroundings">
+                <div class="surroundingsImgfocus" id="surroundingsImgfocus"></div>
+                <div class="surroundingsImg" id="surroundingsImg"></div>
+                <div class="tabTitleWord">企业环境</div>
+            </div>
+        </div>
+        <!-- 公司简介选项卡内容 -->
+        <div class="companyProfileContent" id="companyProfileContent">
+            <div class="companyProfileContentWord">
+                &nbsp;&nbsp;&nbsp;&nbsp;谁与医疗科技有限公司自2013年创立以来，专注于医药大健康事业，以“让生命更健康”为企业使命，将健康的理念和新型的健康品带入千万家庭，竭诚打造一个全面医药的大健康生态圈。
+                <br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;总部设于杭州下沙，谁与和多个国家医疗产业的知名品牌开展深度合作，打造线上线下联动的推广模式，擅长线上品宣及推广促进全市场产品销售，帮助企业实现业务快速增长，目前运营的品牌包括瑞思迈、凯迪泰、中德等多个知名名牌的产品，多年来销售实现快速增长。同时谁与孵化有“时景”，“原声”等自主品牌，“时景”取之古代著名医药学家李时珍之名“时”，张仲景之名“景”寓意做医药互联网中的专家，“时景”品牌旗下有时景大药房连锁有限公司，融合互联网特质，成功打造互联网+药品的新型O2O新型连锁大药房，方便了患者与义务人员，极大节约了社会资源。
+                <br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;医药背景给予谁与强烈的社会责任感，2018年1月，谁与成立杭州长三角睡眠呼吸障碍研究院，致力于提高广大群众及医务人员对SAS（睡眠呼吸暂停综合征）疾病的认知，面向基层医护人员及社会居民开展科学普及宣传工作，研究如何预防睡眠呼吸障碍疾病，改善SAS患者睡眠质量和健康状况。
+                <br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;在互联网的大环境下，谁与紧紧把握科技发展趋势，颠覆传统医疗模式，用心为医患提供沟通便利。谁与将AI与医疗有机结合自主研发“云胎心”APP造福千万孕妇妈妈。同时积极推动健康理念的传播，在医疗媒体领域实现价值延伸，谁与旗下十涩说团队通过多渠道，利用图文、短视频、直播等多种方式综合推广，在医药媒体领域排名前三。
+                <br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;未来，谁与将进一步扎根医药大健康产业，把科学、先进的健康理念带给他人。全体谁与人满怀热情与希望，将谁与“向上、向心、向善”的价值观贯彻落实，让生命更健康。
+            </div>
+        </div>
+        <!-- 愿景与使命选项卡内容 -->
+        <div class="missionContent" id="missionContent">
+            <div class="missionContentCenter">
+                <div class="missionContentCenterWord">
+                    <p class="Recent">近期愿景</p>
+                    <p class="RecentContent">药械互联网市场，全国知名经销商、服务商！2019年预计年销售2亿元，到2020年完成年销售3亿元。</p>
+                    <p class="Mediumterm">中期（2025年）愿景</p>
+                    <p class="RecentContent">在大健康市场，拥有全国知名商品和平台的企业。</p>
+                    <p class="Longterm">中远期（2030年）愿景</p>
+                    <p class="RecentContent">成为大健康市场的龙头企业。</p>
+                </div>
+                <div class="missionContentCenterImg">
+                    <div class="missionContentCenterWordLeft"></div>
+                    <div class="missionContentCenterWordRight"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 核心价值观选项卡内容 -->
+        <div class="ValueContent" id="ValueContent">
+            <div class="To">
+                <!-- 向上 -->
+                <div class="toUp">
+                    <div class="toUpImg"></div>
+                    <p class="toUpTitle">向上</p>
+                    <p class="toUpDetail">敬业态度 团队协作</p>
+                    <p class="toUpEntop">DEVOTED TO WORK</p>
+                    <p class="toUpbottom"> WORKING WITH THE TEAM</p>
+                </div>
+                <!-- 向心 -->
+                <div class="toHeart">
+                    <div class="toHearthImg"></div>
+                    <p class="toUpTitle">向心</p>
+                    <p class="toUpDetail">拥抱变化 自我创造</p>
+                    <p class="toUpEntop">EMBRACE THE CHANGE </p>
+                    <p class="toUpbottom">SELF CREATION</p>
+                </div>
+                <!-- 向善 -->
+                <div class="toKindness">
+                    <div class="tokindImg"></div>
+                    <p class="toUpTitle">向善</p>
+                    <p class="toUpDetail">与人为善 与人健康</p>
+                    <p class="toUpEntop">BE GOOD TO</p>
+                    <p class="toUpbottom">OTHERS STAY HEALTHY</p>
+                </div>
+            </div>
+        </div>
+        <!-- 生态圈文化选项卡内容 -->
+        <div class="cultureContent" id="cultureContent">
+            <div class="cultureTwo">
+                <div class="cultureContentWord">
+                    <p class="cultureContentTitle">脉脉相通 生生不息</p>
+                    <p class="cultureContentDetail">企业这一个整体是一个生态圈，各个部门根据其职能和特点被分布在五个“圈”内，分别是土壤圈、生物圈、水圈、空气圈和岩石圈。</p>
+                    <p class="cultureContentDetail">每一个圈拥有一个自己的吉祥物，他们分别叫作奉献、进取、包容、创造和坚毅，代表了谁与人的品质，</p>
+                    <p class="cultureContentDetail">同时大家用自己的智慧凝结出了独特的生活小岛，体现了每个圈的团队精神和对工作的态度。</p>
+                </div>
+                <div class="cultureContentImg">
+                    <!-- 土壤圈 -->
+                    <div class="soilCircle">
+                        <div class="soilCircleImg"></div>
+                        <p class="soilCircleTitle">土壤圈</p>
+                        <p class="soilCircleDetail">用其肥沃的营养物质</p>
+                        <p class="soilCircleDetail">滋润着世间万物</p>
+                        <p class="soilCircleDetail">秉持着为大家服务的原则给</p>
+                        <p class="soilCircleDetail">公司的日常</p>
+                        <p class="soilCircleDetail">事务提供着不懈的支持</p>
+                    </div>
+                    <!-- 生物圈 -->
+                    <div class="Biosphere">
+                        <div class="biosphereImg"></div>
+                        <p class="soilCircleTitle">生物圈</p>
+                        <p class="soilCircleDetail">生物圈万物生灵，千奇百怪</p>
+                        <p class="soilCircleDetail">许多看得见与看不见的竞争</p>
+                        <p class="soilCircleDetail">充斥在周围</p>
+                        <p class="soilCircleDetail">小伙伴们耳听八路眼观四方</p>   
+                        <p class="soilCircleDetail">打起十二万分的精神</p>  
+                        <p class="soilCircleDetail">在市场中竞争</p>
+                    </div>
+                    <!-- 水圈 -->
+                    <div class="Hydrosphere">
+                        <div class="waterImg"></div>
+                        <p class="soilCircleTitle">水圈</p>
+                        <p class="soilCircleDetail">水圈用它的涓涓细流拂慰着</p>
+                        <p class="soilCircleDetail">每一个客户的心</p>
+                        <p class="soilCircleDetail">上善若水，公司团队的小伙</p>
+                        <p class="soilCircleDetail">伴用自己的热忱和耐心</p>
+                        <p class="soilCircleDetail">将优质的产品和服务</p>
+                        <p class="soilCircleDetail">传递给客户</p>
+                    </div>
+                    <!-- 空气圈 -->
+                    <div class="airRing">
+                        <div class="airImg"></div>
+                        <p class="soilCircleTitle">空气圈</p>
+                        <p class="soilCircleDetail">空气圈飘浮着各种气体</p>
+                        <p class="soilCircleDetail">空灵的气息</p>
+                        <p class="soilCircleDetail">如同创意的源泉</p>
+                        <p class="soilCircleDetail">小伙伴的创造力</p>
+                        <p class="soilCircleDetail">在这样的环境下也在</p>
+                        <p class="soilCircleDetail">不断地迸发</p>
+                    </div>
+                    <!-- 岩石圈 -->
+                    <div class="rockRing">
+                        <div class="rockImg"></div>
+                        <p class="soilCircleTitle">岩石圈</p>
+                        <p class="soilCircleDetail">岩石圈坚毅无比</p>
+                        <p class="soilCircleDetail">构成了生态体系下最坚实的</p>                            
+                        <p class="soilCircleDetail">后盾，用坚硬的外壳</p>
+                        <p class="soilCircleDetail">丰富的经验抵挡风沙</p>
+                        <p class="soilCircleDetail">处理问题，在后方撑起一个</p>
+                        <p class="soilCircleDetail">强大的保护伞</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 企业环境选项卡内容 -->
+        <div class="surroundingsContent" id="surroundingsContent">
+            <div class="surroundingsContentCarousel">
+                <div class="Cooldog_container">
+                    <!-- 图片 -->
+                    <div class="Cooldog_content">
+                        <ul>
+                                <li class="p1">
+                                        <a href="#">
+                                            <img src="http://icon.shuiyu365.com/img/aboutUS/1%281%29.jpg" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="p2">
+                                        <a href="#">
+                                            <img src="http://icon.shuiyu365.com/img/aboutUS/2.jpg" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="p3">
+                                        <a href="#">
+                                            <img src="http://icon.shuiyu365.com/img/aboutUS/3%282%29.jpg" alt="">
+                                        </a>
+                                     </li>
+                                    <li class="p4">
+                                        <a href="#">
+                                            <img src="http://icon.shuiyu365.com/img/aboutUS/4%283%29.jpg" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="p5">
+                                        <a href="#">
+                                            <img src="http://icon.shuiyu365.com/img/aboutUS/5.jpg" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="p5">
+                                        <a href="#">
+                                            <img src="http://icon.shuiyu365.com/img/aboutUS/6.jpg" alt="">
+                                        </a>
+                                    </li>
+                        </ul>
+                    </div>
+                    <!-- 左右按钮 -->
+                    <a href="javascript:;" class="btn_left">
+                        <i class="iconfont icon-zuoyoujiantou"></i>
+                    </a>
+                    <a href="javascript:;" class="btn_right">
+                        <i class="iconfont icon-zuoyoujiantou-copy-copy"></i>
+                    </a>
+                    <!-- 下面小点 -->
+                    <div class="buttons clearfix">
+                        <a href="javascript:;" class="color"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                    </div>
+                </div>      
+            </div>
+        </div>
+    </div>
+    <!-- 底部留言板 -->
+    <div class="foot">
+        <div class="footContent">
+            <div class="footLeft">
+                <p class="companyName">谁与医疗科技（杭州）有限公司</p>
+                <p class="URL">网址:www.shuiyu365.com</p>
+                <p class="phone">电话:0571-86879711</p>
+                <p class="email">邮箱:HRhr@shuiyu365.com</p>
+                <p class="address">地址:杭州市下沙科技园路20号新加坡科技园9幢1101室</p>
+                <div class="twoCode"></div>
+                <p class="attention">扫一扫添加关注</p>
+            </div>
+            <div class="footRight">
+                <div class="messageTitle">-留言后我们会尽快与您联系-</div>
+                <div class="Name">姓名: <input type="text" class="NameInput" id="name" value=""> </div>
+                <div class="messageContent">留言: <textarea  type="text" class="messageContentInput" id="message"></textarea></div>
+                <div class="Email">邮箱: <input type="text" class="EmailInput" id="email"  onblur="verification()"> </div>
+                <div class="verification">验证:
+                    <!--时间：2017-01-11 描述：输入框ct100_textcode -->
+                    <input type="text" id="ctl00_txtcode" onblur="validate()"/>
+                    <!--时间：2017-01-11 描述：把验证码定义为按钮，点击刷新-->
+                    <input type="button" id="code" />
+                    <!--时间：2017-01-11 描述：验证按钮 -->
+                    <span onclick="createCode()" class="change">看不清，换一张</span>
+                </div>
+                <div class="tijiao" id="submit">提交留言</div>
+                <div class="tijiao" id="cancel">取消</div>
+            </div>
+        </div> 
+        <div class="Remarks">
+            <p class="RemarksContent">版权所有：谁与医疗科技（杭州）有限公司  京ICP备：2018-0034号  技术支持：谁与开发部</p>
+        </div> 
+    </div>
+</body>
+<script src="js/serRem.js"></script>
+<script src="js/adoutUs.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/Cooldog.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script>
+    $("#cancel").click(function(){
+        $("#name").val("");
+        $("#message").val("");
+        $("#email").val("");
+        $("#ctl00_txtcode").val("");
+    })
+    $('#submit').click(function(){
+        var name = $("#name").val();
+        var message = $("#message").val();
+        var email = $("#email").val();
+    console.log("你在进行留言操作");
+    $.ajax({
+        url:"http://www.shuiyu365.com/shuiyu/message/insMessage",
+        data: {
+            visitorName:name,
+            visitorMailbox:message,
+            message:email,
+        },
+        success:function(res){
+            alert("留言成功")
+            $("#name").val("");
+            $("#message").val("");
+            $("#email").val("");
+            $("#ctl00_txtcode").val("");
+        },
+        error:function(res){
+            console.log("留言失败");
+        } 
+    });
+})
+</script>
+</html>
